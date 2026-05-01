@@ -1,0 +1,32 @@
+# ── PyTorch (CUDA 12.8 build) ──────────────────────────────────────────────
+# Install with the cu128 index URL (see README.md for the full pip command).
+torch==2.9.1+cu128
+torchvision==0.24.1+cu128
+torchaudio==2.9.1+cu128
+
+# ── vLLM + inference stack ─────────────────────────────────────────────────
+vllm==0.16.0
+transformers==4.57.3
+accelerate==1.12.0
+triton==3.5.1
+flashinfer==0.6.3
+
+# ── Scientific / statistics ────────────────────────────────────────────────
+numpy==2.2.6
+pandas==3.0.1
+scipy==1.17.1
+statsmodels==0.14.6
+matplotlib==3.10.8
+
+# ── Vision ────────────────────────────────────────────────────────────────
+Pillow==12.0.0
+opencv-python-headless==4.13.0.92
+
+# ── Networking / API clients ───────────────────────────────────────────────
+requests==2.32.5
+openai==2.24.0
+httpx==0.28.1
+aiohttp==3.13.3
+
+# ── Utilities ─────────────────────────────────────────────────────────────
+tqdm==4.67.1

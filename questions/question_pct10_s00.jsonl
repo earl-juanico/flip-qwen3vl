@@ -1,0 +1,767 @@
+{"question_id": 10032, "image": "000000291551.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of person in the image."}
+{"question_id": 10033, "image": "000000291551.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of bench in the image."}
+{"question_id": 10034, "image": "000000291551.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of skateboard in the image."}
+{"question_id": 10037, "image": "000000580294.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of person in the image."}
+{"question_id": 10038, "image": "000000580294.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of cup in the image."}
+{"question_id": 10039, "image": "000000580294.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of spoon in the image."}
+{"question_id": 10040, "image": "000000580294.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of bowl in the image."}
+{"question_id": 10041, "image": "000000580294.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of oven in the image."}
+{"question_id": 10042, "image": "000000580294.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of sink in the image."}
+{"question_id": 10043, "image": "000000580294.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of toothbrush in the image."}
+{"question_id": 10044, "image": "000000319617.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of cup in the image."}
+{"question_id": 10045, "image": "000000319617.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of hot dog in the image."}
+{"question_id": 10046, "image": "000000319617.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of dining table in the image."}
+{"question_id": 10171, "image": "000000432468.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of cat in the image."}
+{"question_id": 10172, "image": "000000432468.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of suitcase in the image."}
+{"question_id": 10192, "image": "000000496571.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of person in the image."}
+{"question_id": 10193, "image": "000000496571.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of cup in the image."}
+{"question_id": 10194, "image": "000000496571.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of fork in the image."}
+{"question_id": 10195, "image": "000000496571.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of knife in the image."}
+{"question_id": 10196, "image": "000000496571.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of spoon in the image."}
+{"question_id": 10197, "image": "000000496571.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of bowl in the image."}
+{"question_id": 10198, "image": "000000496571.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of dining table in the image."}
+{"question_id": 10199, "image": "000000496571.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of cell phone in the image."}
+{"question_id": 10239, "image": "000000455448.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of person in the image."}
+{"question_id": 10240, "image": "000000455448.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of cake in the image."}
+{"question_id": 10241, "image": "000000072813.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of dog in the image."}
+{"question_id": 10242, "image": "000000072813.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of bed in the image."}
+{"question_id": 10243, "image": "000000072813.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of tv in the image."}
+{"question_id": 10251, "image": "000000048504.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of person in the image."}
+{"question_id": 10252, "image": "000000048504.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of bench in the image."}
+{"question_id": 10253, "image": "000000048504.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of elephant in the image."}
+{"question_id": 10259, "image": "000000035326.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of bottle in the image."}
+{"question_id": 10260, "image": "000000035326.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of knife in the image."}
+{"question_id": 10261, "image": "000000035326.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of oven in the image."}
+{"question_id": 10264, "image": "000000025394.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of person in the image."}
+{"question_id": 10265, "image": "000000025394.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of bottle in the image."}
+{"question_id": 10266, "image": "000000025394.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of wine glass in the image."}
+{"question_id": 10267, "image": "000000025394.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of cup in the image."}
+{"question_id": 10286, "image": "000000565877.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of person in the image."}
+{"question_id": 10287, "image": "000000565877.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of couch in the image."}
+{"question_id": 10288, "image": "000000565877.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of laptop in the image."}
+{"question_id": 10289, "image": "000000565877.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of book in the image."}
+{"question_id": 10290, "image": "000000565877.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of clock in the image."}
+{"question_id": 10318, "image": "000000327306.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of person in the image."}
+{"question_id": 10319, "image": "000000327306.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of skateboard in the image."}
+{"question_id": 10422, "image": "000000194875.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of person in the image."}
+{"question_id": 10423, "image": "000000194875.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of motorcycle in the image."}
+{"question_id": 10424, "image": "000000194875.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of handbag in the image."}
+{"question_id": 10425, "image": "000000194875.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of bottle in the image."}
+{"question_id": 10426, "image": "000000194875.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of cup in the image."}
+{"question_id": 10427, "image": "000000194875.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of chair in the image."}
+{"question_id": 10428, "image": "000000194875.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of potted plant in the image."}
+{"question_id": 10429, "image": "000000194875.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of dining table in the image."}
+{"question_id": 10430, "image": "000000194875.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of vase in the image."}
+{"question_id": 10448, "image": "000000053624.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of person in the image."}
+{"question_id": 10449, "image": "000000053624.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of elephant in the image."}
+{"question_id": 10468, "image": "000000283412.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of dog in the image."}
+{"question_id": 10469, "image": "000000283412.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of cup in the image."}
+{"question_id": 10470, "image": "000000283412.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of bed in the image."}
+{"question_id": 10485, "image": "000000499313.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of wine glass in the image."}
+{"question_id": 10486, "image": "000000499313.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of cup in the image."}
+{"question_id": 10487, "image": "000000499313.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of pizza in the image."}
+{"question_id": 10488, "image": "000000499313.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of dining table in the image."}
+{"question_id": 10591, "image": "000000425390.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of cat in the image."}
+{"question_id": 10592, "image": "000000425390.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of laptop in the image."}
+{"question_id": 10595, "image": "000000017899.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of person in the image."}
+{"question_id": 10596, "image": "000000017899.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of bird in the image."}
+{"question_id": 10597, "image": "000000017899.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of cup in the image."}
+{"question_id": 10598, "image": "000000017899.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of spoon in the image."}
+{"question_id": 10599, "image": "000000017899.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of hot dog in the image."}
+{"question_id": 10600, "image": "000000017899.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of cake in the image."}
+{"question_id": 10601, "image": "000000017899.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of chair in the image."}
+{"question_id": 10602, "image": "000000017899.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of couch in the image."}
+{"question_id": 10603, "image": "000000017899.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of dining table in the image."}
+{"question_id": 10629, "image": "000000066635.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of tv in the image."}
+{"question_id": 10630, "image": "000000066635.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of mouse in the image."}
+{"question_id": 10631, "image": "000000066635.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of remote in the image."}
+{"question_id": 10632, "image": "000000066635.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of keyboard in the image."}
+{"question_id": 10686, "image": "000000532690.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of person in the image."}
+{"question_id": 10687, "image": "000000532690.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of couch in the image."}
+{"question_id": 10688, "image": "000000532690.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of remote in the image."}
+{"question_id": 10738, "image": "000000520009.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of person in the image."}
+{"question_id": 10739, "image": "000000520009.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of car in the image."}
+{"question_id": 10740, "image": "000000520009.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of bus in the image."}
+{"question_id": 10741, "image": "000000520009.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of traffic light in the image."}
+{"question_id": 10742, "image": "000000520009.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of clock in the image."}
+{"question_id": 10746, "image": "000000308394.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of person in the image."}
+{"question_id": 10747, "image": "000000308394.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of bench in the image."}
+{"question_id": 10748, "image": "000000308394.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of umbrella in the image."}
+{"question_id": 10749, "image": "000000308394.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of handbag in the image."}
+{"question_id": 10816, "image": "000000310862.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of person in the image."}
+{"question_id": 10817, "image": "000000310862.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of tie in the image."}
+{"question_id": 10818, "image": "000000310862.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of dining table in the image."}
+{"question_id": 10826, "image": "000000473821.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of bowl in the image."}
+{"question_id": 10827, "image": "000000473821.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of chair in the image."}
+{"question_id": 10828, "image": "000000473821.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of couch in the image."}
+{"question_id": 10864, "image": "000000581062.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of person in the image."}
+{"question_id": 10865, "image": "000000581062.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of skateboard in the image."}
+{"question_id": 10866, "image": "000000546829.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of bench in the image."}
+{"question_id": 10867, "image": "000000546829.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of dog in the image."}
+{"question_id": 10949, "image": "000000255749.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of person in the image."}
+{"question_id": 10950, "image": "000000255749.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of bus in the image."}
+{"question_id": 10987, "image": "000000491216.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of cat in the image."}
+{"question_id": 10988, "image": "000000491216.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of bottle in the image."}
+{"question_id": 10989, "image": "000000491216.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of spoon in the image."}
+{"question_id": 10990, "image": "000000491216.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of banana in the image."}
+{"question_id": 10991, "image": "000000491216.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of chair in the image."}
+{"question_id": 10992, "image": "000000491216.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of potted plant in the image."}
+{"question_id": 10993, "image": "000000491216.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of oven in the image."}
+{"question_id": 10994, "image": "000000491216.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of sink in the image."}
+{"question_id": 10995, "image": "000000491216.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of refrigerator in the image."}
+{"question_id": 11073, "image": "000000415536.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of person in the image."}
+{"question_id": 11074, "image": "000000415536.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of bus in the image."}
+{"question_id": 11131, "image": "000000084477.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of person in the image."}
+{"question_id": 11132, "image": "000000084477.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of umbrella in the image."}
+{"question_id": 11133, "image": "000000084477.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of chair in the image."}
+{"question_id": 11187, "image": "000000298697.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of horse in the image."}
+{"question_id": 11188, "image": "000000298697.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of cow in the image."}
+{"question_id": 11308, "image": "000000106235.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of chair in the image."}
+{"question_id": 11309, "image": "000000106235.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of couch in the image."}
+{"question_id": 11310, "image": "000000106235.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of potted plant in the image."}
+{"question_id": 11311, "image": "000000106235.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of dining table in the image."}
+{"question_id": 11312, "image": "000000106235.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of remote in the image."}
+{"question_id": 11417, "image": "000000202445.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of cat in the image."}
+{"question_id": 11418, "image": "000000202445.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of bed in the image."}
+{"question_id": 11444, "image": "000000355240.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of car in the image."}
+{"question_id": 11445, "image": "000000355240.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of dog in the image."}
+{"question_id": 11446, "image": "000000355240.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of couch in the image."}
+{"question_id": 11479, "image": "000000238410.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of person in the image."}
+{"question_id": 11480, "image": "000000238410.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of umbrella in the image."}
+{"question_id": 11481, "image": "000000238410.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of bottle in the image."}
+{"question_id": 11482, "image": "000000238410.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of wine glass in the image."}
+{"question_id": 11483, "image": "000000238410.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of chair in the image."}
+{"question_id": 11484, "image": "000000238410.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of potted plant in the image."}
+{"question_id": 11485, "image": "000000238410.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of dining table in the image."}
+{"question_id": 11486, "image": "000000238410.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of clock in the image."}
+{"question_id": 11497, "image": "000000357567.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of toilet in the image."}
+{"question_id": 11498, "image": "000000357567.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of sink in the image."}
+{"question_id": 11499, "image": "000000546325.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of couch in the image."}
+{"question_id": 11500, "image": "000000546325.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of dining table in the image."}
+{"question_id": 11501, "image": "000000546325.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of remote in the image."}
+{"question_id": 11588, "image": "000000109900.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of person in the image."}
+{"question_id": 11589, "image": "000000109900.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of airplane in the image."}
+{"question_id": 11590, "image": "000000109900.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of truck in the image."}
+{"question_id": 11639, "image": "000000067534.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of person in the image."}
+{"question_id": 11640, "image": "000000067534.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of tie in the image."}
+{"question_id": 11641, "image": "000000067534.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of chair in the image."}
+{"question_id": 11649, "image": "000000568690.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of cat in the image."}
+{"question_id": 11650, "image": "000000568690.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of toilet in the image."}
+{"question_id": 11656, "image": "000000097278.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of person in the image."}
+{"question_id": 11657, "image": "000000097278.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of snowboard in the image."}
+{"question_id": 11658, "image": "000000292005.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of bottle in the image."}
+{"question_id": 11659, "image": "000000292005.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of toilet in the image."}
+{"question_id": 11660, "image": "000000292005.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of sink in the image."}
+{"question_id": 11691, "image": "000000336628.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of person in the image."}
+{"question_id": 11692, "image": "000000336628.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of bus in the image."}
+{"question_id": 11693, "image": "000000336628.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of cell phone in the image."}
+{"question_id": 11708, "image": "000000037740.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of chair in the image."}
+{"question_id": 11709, "image": "000000037740.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of couch in the image."}
+{"question_id": 11710, "image": "000000037740.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of potted plant in the image."}
+{"question_id": 11711, "image": "000000037740.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of tv in the image."}
+{"question_id": 11712, "image": "000000037740.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of laptop in the image."}
+{"question_id": 11713, "image": "000000037740.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of mouse in the image."}
+{"question_id": 11714, "image": "000000037740.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of keyboard in the image."}
+{"question_id": 11715, "image": "000000037740.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of book in the image."}
+{"question_id": 11767, "image": "000000052017.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of person in the image."}
+{"question_id": 11768, "image": "000000052017.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of airplane in the image."}
+{"question_id": 11782, "image": "000000276285.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of person in the image."}
+{"question_id": 11783, "image": "000000276285.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of cup in the image."}
+{"question_id": 11784, "image": "000000276285.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of fork in the image."}
+{"question_id": 11785, "image": "000000276285.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of knife in the image."}
+{"question_id": 11786, "image": "000000276285.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of pizza in the image."}
+{"question_id": 11787, "image": "000000276285.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of chair in the image."}
+{"question_id": 11788, "image": "000000276285.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of dining table in the image."}
+{"question_id": 11806, "image": "000000126110.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of person in the image."}
+{"question_id": 11807, "image": "000000126110.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of truck in the image."}
+{"question_id": 11808, "image": "000000126110.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of dog in the image."}
+{"question_id": 11811, "image": "000000140583.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of person in the image."}
+{"question_id": 11812, "image": "000000140583.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of truck in the image."}
+{"question_id": 11813, "image": "000000140583.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of sheep in the image."}
+{"question_id": 11814, "image": "000000140583.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of cow in the image."}
+{"question_id": 11839, "image": "000000339823.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of person in the image."}
+{"question_id": 11840, "image": "000000339823.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of umbrella in the image."}
+{"question_id": 11909, "image": "000000231097.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of cup in the image."}
+{"question_id": 11910, "image": "000000231097.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of fork in the image."}
+{"question_id": 11911, "image": "000000231097.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of bowl in the image."}
+{"question_id": 11912, "image": "000000231097.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of broccoli in the image."}
+{"question_id": 11913, "image": "000000231097.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of carrot in the image."}
+{"question_id": 11914, "image": "000000231097.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of dining table in the image."}
+{"question_id": 11929, "image": "000000166287.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of bird in the image."}
+{"question_id": 11930, "image": "000000166287.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of cow in the image."}
+{"question_id": 11942, "image": "000000042889.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of keyboard in the image."}
+{"question_id": 11943, "image": "000000042889.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of teddy bear in the image."}
+{"question_id": 12132, "image": "000000384527.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of bicycle in the image."}
+{"question_id": 12133, "image": "000000384527.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of cup in the image."}
+{"question_id": 12134, "image": "000000384527.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of chair in the image."}
+{"question_id": 12135, "image": "000000384527.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of potted plant in the image."}
+{"question_id": 12136, "image": "000000384527.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of dining table in the image."}
+{"question_id": 12137, "image": "000000384527.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of book in the image."}
+{"question_id": 12138, "image": "000000384527.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of clock in the image."}
+{"question_id": 12139, "image": "000000384527.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of vase in the image."}
+{"question_id": 12189, "image": "000000350833.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of toilet in the image."}
+{"question_id": 12190, "image": "000000350833.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of sink in the image."}
+{"question_id": 12225, "image": "000000201426.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of person in the image."}
+{"question_id": 12226, "image": "000000201426.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of cup in the image."}
+{"question_id": 12227, "image": "000000201426.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of pizza in the image."}
+{"question_id": 12228, "image": "000000201426.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of cake in the image."}
+{"question_id": 12229, "image": "000000201426.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of chair in the image."}
+{"question_id": 12230, "image": "000000201426.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of dining table in the image."}
+{"question_id": 12280, "image": "000000508370.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of person in the image."}
+{"question_id": 12281, "image": "000000508370.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of bicycle in the image."}
+{"question_id": 12282, "image": "000000508370.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of cup in the image."}
+{"question_id": 12315, "image": "000000575970.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of cup in the image."}
+{"question_id": 12316, "image": "000000575970.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of bowl in the image."}
+{"question_id": 12317, "image": "000000575970.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of banana in the image."}
+{"question_id": 12318, "image": "000000575970.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of apple in the image."}
+{"question_id": 12319, "image": "000000575970.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of chair in the image."}
+{"question_id": 12320, "image": "000000575970.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of potted plant in the image."}
+{"question_id": 12321, "image": "000000575970.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of dining table in the image."}
+{"question_id": 12322, "image": "000000575970.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of microwave in the image."}
+{"question_id": 12323, "image": "000000575970.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of oven in the image."}
+{"question_id": 12324, "image": "000000575970.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of sink in the image."}
+{"question_id": 12325, "image": "000000575970.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of refrigerator in the image."}
+{"question_id": 12326, "image": "000000575970.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of vase in the image."}
+{"question_id": 12353, "image": "000000090108.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of bottle in the image."}
+{"question_id": 12354, "image": "000000090108.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of toilet in the image."}
+{"question_id": 12355, "image": "000000090108.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of sink in the image."}
+{"question_id": 12374, "image": "000000014831.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of cat in the image."}
+{"question_id": 12375, "image": "000000014831.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of bed in the image."}
+{"question_id": 12537, "image": "000000109055.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of bicycle in the image."}
+{"question_id": 12538, "image": "000000109055.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of cat in the image."}
+{"question_id": 12539, "image": "000000138492.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of dog in the image."}
+{"question_id": 12540, "image": "000000138492.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of frisbee in the image."}
+{"question_id": 12576, "image": "000000127987.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of tv in the image."}
+{"question_id": 12577, "image": "000000127987.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of keyboard in the image."}
+{"question_id": 12583, "image": "000000159458.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of dog in the image."}
+{"question_id": 12584, "image": "000000159458.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of chair in the image."}
+{"question_id": 12585, "image": "000000159458.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of bed in the image."}
+{"question_id": 12613, "image": "000000156076.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of person in the image."}
+{"question_id": 12614, "image": "000000156076.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of bottle in the image."}
+{"question_id": 12615, "image": "000000156076.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of cup in the image."}
+{"question_id": 12616, "image": "000000156076.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of fork in the image."}
+{"question_id": 12617, "image": "000000156076.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of knife in the image."}
+{"question_id": 12618, "image": "000000156076.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of spoon in the image."}
+{"question_id": 12619, "image": "000000156076.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of bowl in the image."}
+{"question_id": 12620, "image": "000000156076.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of pizza in the image."}
+{"question_id": 12621, "image": "000000156076.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of dining table in the image."}
+{"question_id": 12622, "image": "000000156076.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of cell phone in the image."}
+{"question_id": 12627, "image": "000000476119.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of person in the image."}
+{"question_id": 12628, "image": "000000476119.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of car in the image."}
+{"question_id": 12629, "image": "000000476119.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of truck in the image."}
+{"question_id": 12630, "image": "000000476119.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of skateboard in the image."}
+{"question_id": 12682, "image": "000000581357.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of person in the image."}
+{"question_id": 12683, "image": "000000581357.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of bench in the image."}
+{"question_id": 12684, "image": "000000581357.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of skateboard in the image."}
+{"question_id": 12716, "image": "000000313588.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of person in the image."}
+{"question_id": 12717, "image": "000000313588.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of car in the image."}
+{"question_id": 12718, "image": "000000313588.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of truck in the image."}
+{"question_id": 12719, "image": "000000313588.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of umbrella in the image."}
+{"question_id": 12720, "image": "000000313588.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of handbag in the image."}
+{"question_id": 12748, "image": "000000430056.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of sandwich in the image."}
+{"question_id": 12749, "image": "000000430056.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of keyboard in the image."}
+{"question_id": 12764, "image": "000000315450.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of car in the image."}
+{"question_id": 12765, "image": "000000315450.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of bus in the image."}
+{"question_id": 12766, "image": "000000315450.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of truck in the image."}
+{"question_id": 12767, "image": "000000315450.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of traffic light in the image."}
+{"question_id": 12855, "image": "000000324258.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of person in the image."}
+{"question_id": 12856, "image": "000000324258.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of bottle in the image."}
+{"question_id": 12857, "image": "000000324258.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of couch in the image."}
+{"question_id": 12858, "image": "000000324258.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of laptop in the image."}
+{"question_id": 12859, "image": "000000324258.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of remote in the image."}
+{"question_id": 12860, "image": "000000324258.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of book in the image."}
+{"question_id": 12940, "image": "000000024610.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of backpack in the image."}
+{"question_id": 12941, "image": "000000024610.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of bottle in the image."}
+{"question_id": 12942, "image": "000000024610.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of chair in the image."}
+{"question_id": 12943, "image": "000000024610.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of couch in the image."}
+{"question_id": 12944, "image": "000000024610.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of laptop in the image."}
+{"question_id": 12945, "image": "000000024610.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of book in the image."}
+{"question_id": 13014, "image": "000000387916.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of person in the image."}
+{"question_id": 13015, "image": "000000387916.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of skis in the image."}
+{"question_id": 13016, "image": "000000387916.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of snowboard in the image."}
+{"question_id": 13028, "image": "000000267191.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of person in the image."}
+{"question_id": 13029, "image": "000000267191.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of elephant in the image."}
+{"question_id": 13030, "image": "000000435299.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of cat in the image."}
+{"question_id": 13031, "image": "000000435299.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of bed in the image."}
+{"question_id": 13042, "image": "000000189475.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of person in the image."}
+{"question_id": 13043, "image": "000000189475.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of bottle in the image."}
+{"question_id": 13044, "image": "000000189475.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of cup in the image."}
+{"question_id": 13045, "image": "000000189475.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of fork in the image."}
+{"question_id": 13046, "image": "000000189475.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of knife in the image."}
+{"question_id": 13047, "image": "000000189475.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of pizza in the image."}
+{"question_id": 13048, "image": "000000189475.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of chair in the image."}
+{"question_id": 13049, "image": "000000189475.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of potted plant in the image."}
+{"question_id": 13050, "image": "000000189475.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of dining table in the image."}
+{"question_id": 13051, "image": "000000189475.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of refrigerator in the image."}
+{"question_id": 13052, "image": "000000189475.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of vase in the image."}
+{"question_id": 13076, "image": "000000107339.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of person in the image."}
+{"question_id": 13077, "image": "000000107339.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of couch in the image."}
+{"question_id": 13078, "image": "000000107339.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of remote in the image."}
+{"question_id": 13079, "image": "000000107339.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of book in the image."}
+{"question_id": 13105, "image": "000000579970.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of chair in the image."}
+{"question_id": 13106, "image": "000000579970.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of couch in the image."}
+{"question_id": 13107, "image": "000000579970.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of potted plant in the image."}
+{"question_id": 13108, "image": "000000579970.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of tv in the image."}
+{"question_id": 13109, "image": "000000579970.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of book in the image."}
+{"question_id": 13110, "image": "000000222317.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of dog in the image."}
+{"question_id": 13111, "image": "000000222317.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of couch in the image."}
+{"question_id": 13112, "image": "000000222317.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of remote in the image."}
+{"question_id": 13119, "image": "000000231549.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of cup in the image."}
+{"question_id": 13120, "image": "000000231549.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of bed in the image."}
+{"question_id": 13121, "image": "000000231549.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of clock in the image."}
+{"question_id": 13122, "image": "000000096493.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of person in the image."}
+{"question_id": 13123, "image": "000000096493.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of couch in the image."}
+{"question_id": 13124, "image": "000000096493.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of remote in the image."}
+{"question_id": 13137, "image": "000000320554.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of bench in the image."}
+{"question_id": 13138, "image": "000000320554.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of cat in the image."}
+{"question_id": 13168, "image": "000000417285.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of person in the image."}
+{"question_id": 13169, "image": "000000417285.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of cup in the image."}
+{"question_id": 13170, "image": "000000417285.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of fork in the image."}
+{"question_id": 13171, "image": "000000417285.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of spoon in the image."}
+{"question_id": 13172, "image": "000000417285.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of cake in the image."}
+{"question_id": 13210, "image": "000000244496.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of person in the image."}
+{"question_id": 13211, "image": "000000244496.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of tie in the image."}
+{"question_id": 13234, "image": "000000350405.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of person in the image."}
+{"question_id": 13235, "image": "000000350405.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of snowboard in the image."}
+{"question_id": 13272, "image": "000000201775.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of toilet in the image."}
+{"question_id": 13273, "image": "000000201775.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of sink in the image."}
+{"question_id": 13285, "image": "000000530975.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of person in the image."}
+{"question_id": 13286, "image": "000000530975.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of umbrella in the image."}
+{"question_id": 13287, "image": "000000530975.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of handbag in the image."}
+{"question_id": 13288, "image": "000000530975.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of fork in the image."}
+{"question_id": 13289, "image": "000000530975.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of hot dog in the image."}
+{"question_id": 13290, "image": "000000530975.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of chair in the image."}
+{"question_id": 13291, "image": "000000530975.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of potted plant in the image."}
+{"question_id": 13292, "image": "000000530975.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of dining table in the image."}
+{"question_id": 13310, "image": "000000356424.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of person in the image."}
+{"question_id": 13311, "image": "000000356424.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of car in the image."}
+{"question_id": 13312, "image": "000000356424.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of bottle in the image."}
+{"question_id": 13313, "image": "000000356424.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of cup in the image."}
+{"question_id": 13314, "image": "000000356424.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of chair in the image."}
+{"question_id": 13315, "image": "000000356424.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of dining table in the image."}
+{"question_id": 13330, "image": "000000473118.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of person in the image."}
+{"question_id": 13331, "image": "000000473118.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of bicycle in the image."}
+{"question_id": 13332, "image": "000000473118.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of skateboard in the image."}
+{"question_id": 13353, "image": "000000146358.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of person in the image."}
+{"question_id": 13354, "image": "000000146358.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of tie in the image."}
+{"question_id": 13355, "image": "000000146358.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of wine glass in the image."}
+{"question_id": 13356, "image": "000000146358.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of knife in the image."}
+{"question_id": 13357, "image": "000000146358.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of cake in the image."}
+{"question_id": 13358, "image": "000000146358.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of chair in the image."}
+{"question_id": 13359, "image": "000000146358.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of dining table in the image."}
+{"question_id": 13386, "image": "000000560880.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of person in the image."}
+{"question_id": 13387, "image": "000000560880.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of dog in the image."}
+{"question_id": 13388, "image": "000000560880.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of horse in the image."}
+{"question_id": 13398, "image": "000000047801.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of person in the image."}
+{"question_id": 13399, "image": "000000047801.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of spoon in the image."}
+{"question_id": 13400, "image": "000000047801.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of cake in the image."}
+{"question_id": 13492, "image": "000000171382.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of person in the image."}
+{"question_id": 13493, "image": "000000171382.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of car in the image."}
+{"question_id": 13494, "image": "000000171382.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of traffic light in the image."}
+{"question_id": 13495, "image": "000000171382.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of backpack in the image."}
+{"question_id": 13496, "image": "000000171382.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of umbrella in the image."}
+{"question_id": 13497, "image": "000000171382.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of handbag in the image."}
+{"question_id": 13498, "image": "000000171382.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of skateboard in the image."}
+{"question_id": 13499, "image": "000000171382.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of cell phone in the image."}
+{"question_id": 13500, "image": "000000021167.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of person in the image."}
+{"question_id": 13501, "image": "000000021167.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of tie in the image."}
+{"question_id": 13502, "image": "000000021167.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of wine glass in the image."}
+{"question_id": 13536, "image": "000000472375.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of motorcycle in the image."}
+{"question_id": 13537, "image": "000000472375.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of dog in the image."}
+{"question_id": 13538, "image": "000000472375.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of cup in the image."}
+{"question_id": 13560, "image": "000000182611.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of person in the image."}
+{"question_id": 13561, "image": "000000182611.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of bottle in the image."}
+{"question_id": 13562, "image": "000000182611.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of cup in the image."}
+{"question_id": 13563, "image": "000000182611.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of spoon in the image."}
+{"question_id": 13564, "image": "000000182611.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of bowl in the image."}
+{"question_id": 13565, "image": "000000182611.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of sandwich in the image."}
+{"question_id": 13566, "image": "000000182611.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of cake in the image."}
+{"question_id": 13567, "image": "000000182611.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of dining table in the image."}
+{"question_id": 13568, "image": "000000182611.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of oven in the image."}
+{"question_id": 13736, "image": "000000194832.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of bus in the image."}
+{"question_id": 13737, "image": "000000194832.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of chair in the image."}
+{"question_id": 13738, "image": "000000194832.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of couch in the image."}
+{"question_id": 13739, "image": "000000194832.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of tv in the image."}
+{"question_id": 13740, "image": "000000058111.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of cat in the image."}
+{"question_id": 13741, "image": "000000058111.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of book in the image."}
+{"question_id": 13804, "image": "000000063965.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of person in the image."}
+{"question_id": 13805, "image": "000000063965.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of spoon in the image."}
+{"question_id": 13806, "image": "000000063965.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of cake in the image."}
+{"question_id": 13813, "image": "000000452793.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of sink in the image."}
+{"question_id": 13814, "image": "000000452793.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of refrigerator in the image."}
+{"question_id": 13867, "image": "000000397681.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of person in the image."}
+{"question_id": 13868, "image": "000000397681.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of fork in the image."}
+{"question_id": 13869, "image": "000000397681.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of bowl in the image."}
+{"question_id": 13870, "image": "000000397681.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of orange in the image."}
+{"question_id": 13871, "image": "000000397681.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of carrot in the image."}
+{"question_id": 13872, "image": "000000397681.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of cake in the image."}
+{"question_id": 13953, "image": "000000441543.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of person in the image."}
+{"question_id": 13954, "image": "000000441543.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of backpack in the image."}
+{"question_id": 13955, "image": "000000441543.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of umbrella in the image."}
+{"question_id": 13956, "image": "000000441543.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of cell phone in the image."}
+{"question_id": 13961, "image": "000000169076.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of person in the image."}
+{"question_id": 13962, "image": "000000169076.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of cat in the image."}
+{"question_id": 13963, "image": "000000169076.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of dog in the image."}
+{"question_id": 13964, "image": "000000169076.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of bed in the image."}
+{"question_id": 13965, "image": "000000169076.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of tv in the image."}
+{"question_id": 13966, "image": "000000428111.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of person in the image."}
+{"question_id": 13967, "image": "000000428111.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of bicycle in the image."}
+{"question_id": 13968, "image": "000000428111.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of backpack in the image."}
+{"question_id": 13969, "image": "000000428111.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of skateboard in the image."}
+{"question_id": 13982, "image": "000000184324.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of person in the image."}
+{"question_id": 13983, "image": "000000184324.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of bicycle in the image."}
+{"question_id": 13984, "image": "000000184324.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of car in the image."}
+{"question_id": 13985, "image": "000000184324.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of bus in the image."}
+{"question_id": 13986, "image": "000000184324.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of truck in the image."}
+{"question_id": 13987, "image": "000000184324.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of stop sign in the image."}
+{"question_id": 13988, "image": "000000184324.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of backpack in the image."}
+{"question_id": 13989, "image": "000000184324.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of umbrella in the image."}
+{"question_id": 13990, "image": "000000184324.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of handbag in the image."}
+{"question_id": 13991, "image": "000000169356.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of person in the image."}
+{"question_id": 13992, "image": "000000169356.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of skateboard in the image."}
+{"question_id": 14036, "image": "000000051598.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of bottle in the image."}
+{"question_id": 14037, "image": "000000051598.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of sink in the image."}
+{"question_id": 14074, "image": "000000001584.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of person in the image."}
+{"question_id": 14075, "image": "000000001584.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of bus in the image."}
+{"question_id": 14125, "image": "000000292330.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of dog in the image."}
+{"question_id": 14126, "image": "000000292330.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of baseball bat in the image."}
+{"question_id": 14129, "image": "000000056127.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of bench in the image."}
+{"question_id": 14130, "image": "000000056127.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of cup in the image."}
+{"question_id": 14131, "image": "000000056127.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of oven in the image."}
+{"question_id": 14132, "image": "000000056127.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of sink in the image."}
+{"question_id": 14133, "image": "000000056127.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of refrigerator in the image."}
+{"question_id": 14137, "image": "000000397133.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of person in the image."}
+{"question_id": 14138, "image": "000000397133.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of bottle in the image."}
+{"question_id": 14139, "image": "000000397133.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of cup in the image."}
+{"question_id": 14140, "image": "000000397133.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of knife in the image."}
+{"question_id": 14141, "image": "000000397133.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of spoon in the image."}
+{"question_id": 14142, "image": "000000397133.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of bowl in the image."}
+{"question_id": 14143, "image": "000000397133.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of broccoli in the image."}
+{"question_id": 14144, "image": "000000397133.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of carrot in the image."}
+{"question_id": 14145, "image": "000000397133.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of dining table in the image."}
+{"question_id": 14146, "image": "000000397133.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of oven in the image."}
+{"question_id": 14147, "image": "000000397133.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of sink in the image."}
+{"question_id": 14154, "image": "000000032941.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of person in the image."}
+{"question_id": 14155, "image": "000000032941.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of car in the image."}
+{"question_id": 14156, "image": "000000032941.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of bus in the image."}
+{"question_id": 14157, "image": "000000032941.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of truck in the image."}
+{"question_id": 14158, "image": "000000032941.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of traffic light in the image."}
+{"question_id": 14164, "image": "000000401446.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of person in the image."}
+{"question_id": 14165, "image": "000000401446.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of umbrella in the image."}
+{"question_id": 14166, "image": "000000401446.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of handbag in the image."}
+{"question_id": 14182, "image": "000000416330.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of cat in the image."}
+{"question_id": 14183, "image": "000000416330.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of bed in the image."}
+{"question_id": 14204, "image": "000000127182.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of knife in the image."}
+{"question_id": 14205, "image": "000000127182.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of potted plant in the image."}
+{"question_id": 14206, "image": "000000127182.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of microwave in the image."}
+{"question_id": 14207, "image": "000000127182.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of oven in the image."}
+{"question_id": 14208, "image": "000000127182.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of sink in the image."}
+{"question_id": 14209, "image": "000000127182.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of refrigerator in the image."}
+{"question_id": 14210, "image": "000000127182.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of vase in the image."}
+{"question_id": 14222, "image": "000000515025.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of person in the image."}
+{"question_id": 14223, "image": "000000515025.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of car in the image."}
+{"question_id": 14224, "image": "000000515025.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of truck in the image."}
+{"question_id": 14225, "image": "000000515025.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of cat in the image."}
+{"question_id": 14226, "image": "000000515025.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of bottle in the image."}
+{"question_id": 14227, "image": "000000515025.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of cup in the image."}
+{"question_id": 14228, "image": "000000515025.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of dining table in the image."}
+{"question_id": 14288, "image": "000000305343.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of dog in the image."}
+{"question_id": 14289, "image": "000000305343.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of cup in the image."}
+{"question_id": 14333, "image": "000000340894.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of person in the image."}
+{"question_id": 14334, "image": "000000340894.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of cup in the image."}
+{"question_id": 14335, "image": "000000340894.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of chair in the image."}
+{"question_id": 14336, "image": "000000340894.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of tv in the image."}
+{"question_id": 14337, "image": "000000340894.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of laptop in the image."}
+{"question_id": 14338, "image": "000000340894.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of mouse in the image."}
+{"question_id": 14339, "image": "000000340894.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of keyboard in the image."}
+{"question_id": 14340, "image": "000000340894.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of cell phone in the image."}
+{"question_id": 14380, "image": "000000363461.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of chair in the image."}
+{"question_id": 14381, "image": "000000363461.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of tv in the image."}
+{"question_id": 14382, "image": "000000363461.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of laptop in the image."}
+{"question_id": 14383, "image": "000000363461.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of mouse in the image."}
+{"question_id": 14384, "image": "000000363461.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of keyboard in the image."}
+{"question_id": 14408, "image": "000000334555.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of person in the image."}
+{"question_id": 14409, "image": "000000334555.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of car in the image."}
+{"question_id": 14410, "image": "000000334555.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of truck in the image."}
+{"question_id": 14411, "image": "000000334555.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of cow in the image."}
+{"question_id": 14412, "image": "000000334555.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of handbag in the image."}
+{"question_id": 14413, "image": "000000334555.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of cell phone in the image."}
+{"question_id": 14482, "image": "000000105249.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of toilet in the image."}
+{"question_id": 14483, "image": "000000105249.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of sink in the image."}
+{"question_id": 14495, "image": "000000525083.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of chair in the image."}
+{"question_id": 14496, "image": "000000525083.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of couch in the image."}
+{"question_id": 14497, "image": "000000525083.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of dining table in the image."}
+{"question_id": 14498, "image": "000000525083.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of tv in the image."}
+{"question_id": 14499, "image": "000000525083.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of microwave in the image."}
+{"question_id": 14500, "image": "000000525083.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of sink in the image."}
+{"question_id": 14501, "image": "000000525083.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of refrigerator in the image."}
+{"question_id": 14517, "image": "000000290768.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of bottle in the image."}
+{"question_id": 14518, "image": "000000290768.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of cup in the image."}
+{"question_id": 14519, "image": "000000290768.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of knife in the image."}
+{"question_id": 14520, "image": "000000290768.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of oven in the image."}
+{"question_id": 14521, "image": "000000290768.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of sink in the image."}
+{"question_id": 14547, "image": "000000463542.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of person in the image."}
+{"question_id": 14548, "image": "000000463542.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of skis in the image."}
+{"question_id": 14549, "image": "000000463542.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of snowboard in the image."}
+{"question_id": 14585, "image": "000000357816.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of person in the image."}
+{"question_id": 14586, "image": "000000357816.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of car in the image."}
+{"question_id": 14587, "image": "000000357816.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of bench in the image."}
+{"question_id": 14588, "image": "000000357816.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of umbrella in the image."}
+{"question_id": 14589, "image": "000000357816.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of sports ball in the image."}
+{"question_id": 14590, "image": "000000357816.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of baseball bat in the image."}
+{"question_id": 14591, "image": "000000357816.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of baseball glove in the image."}
+{"question_id": 14679, "image": "000000529528.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of bowl in the image."}
+{"question_id": 14680, "image": "000000529528.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of cake in the image."}
+{"question_id": 14684, "image": "000000555009.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of bottle in the image."}
+{"question_id": 14685, "image": "000000555009.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of cup in the image."}
+{"question_id": 14686, "image": "000000555009.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of tv in the image."}
+{"question_id": 14687, "image": "000000555009.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of laptop in the image."}
+{"question_id": 14688, "image": "000000555009.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of mouse in the image."}
+{"question_id": 14689, "image": "000000555009.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of keyboard in the image."}
+{"question_id": 14855, "image": "000000527616.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of person in the image."}
+{"question_id": 14856, "image": "000000527616.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of tie in the image."}
+{"question_id": 14857, "image": "000000527616.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of couch in the image."}
+{"question_id": 14858, "image": "000000527616.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of tv in the image."}
+{"question_id": 14872, "image": "000000367095.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of person in the image."}
+{"question_id": 14873, "image": "000000367095.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of cup in the image."}
+{"question_id": 14874, "image": "000000367095.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of chair in the image."}
+{"question_id": 14875, "image": "000000367095.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of potted plant in the image."}
+{"question_id": 14876, "image": "000000367095.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of dining table in the image."}
+{"question_id": 14877, "image": "000000367095.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of tv in the image."}
+{"question_id": 14878, "image": "000000367095.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of laptop in the image."}
+{"question_id": 14879, "image": "000000367095.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of mouse in the image."}
+{"question_id": 14880, "image": "000000367095.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of keyboard in the image."}
+{"question_id": 14881, "image": "000000367095.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of scissors in the image."}
+{"question_id": 14882, "image": "000000382030.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of umbrella in the image."}
+{"question_id": 14883, "image": "000000382030.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of sports ball in the image."}
+{"question_id": 14884, "image": "000000382030.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of potted plant in the image."}
+{"question_id": 14885, "image": "000000382030.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of dining table in the image."}
+{"question_id": 14928, "image": "000000255165.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of cup in the image."}
+{"question_id": 14929, "image": "000000255165.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of tv in the image."}
+{"question_id": 14930, "image": "000000255165.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of laptop in the image."}
+{"question_id": 14931, "image": "000000255165.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of mouse in the image."}
+{"question_id": 14932, "image": "000000255165.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of keyboard in the image."}
+{"question_id": 14933, "image": "000000255165.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of book in the image."}
+{"question_id": 14941, "image": "000000278848.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of person in the image."}
+{"question_id": 14942, "image": "000000278848.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of car in the image."}
+{"question_id": 14943, "image": "000000278848.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of bus in the image."}
+{"question_id": 14944, "image": "000000278848.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of umbrella in the image."}
+{"question_id": 14954, "image": "000000108026.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of person in the image."}
+{"question_id": 14955, "image": "000000108026.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of mouse in the image."}
+{"question_id": 14956, "image": "000000108026.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of keyboard in the image."}
+{"question_id": 15066, "image": "000000453341.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of couch in the image."}
+{"question_id": 15067, "image": "000000453341.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of tv in the image."}
+{"question_id": 15068, "image": "000000453341.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of mouse in the image."}
+{"question_id": 15069, "image": "000000453341.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of keyboard in the image."}
+{"question_id": 15070, "image": "000000453341.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of cell phone in the image."}
+{"question_id": 15071, "image": "000000453341.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of teddy bear in the image."}
+{"question_id": 15072, "image": "000000369037.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of person in the image."}
+{"question_id": 15073, "image": "000000369037.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of elephant in the image."}
+{"question_id": 15074, "image": "000000369037.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of handbag in the image."}
+{"question_id": 15075, "image": "000000369037.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of bottle in the image."}
+{"question_id": 15124, "image": "000000147223.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of car in the image."}
+{"question_id": 15125, "image": "000000147223.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of bus in the image."}
+{"question_id": 15275, "image": "000000273711.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of person in the image."}
+{"question_id": 15276, "image": "000000273711.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of cup in the image."}
+{"question_id": 15277, "image": "000000273711.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of spoon in the image."}
+{"question_id": 15278, "image": "000000273711.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of bowl in the image."}
+{"question_id": 15279, "image": "000000273711.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of apple in the image."}
+{"question_id": 15280, "image": "000000273711.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of sandwich in the image."}
+{"question_id": 15281, "image": "000000273711.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of orange in the image."}
+{"question_id": 15282, "image": "000000273711.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of carrot in the image."}
+{"question_id": 15283, "image": "000000273711.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of chair in the image."}
+{"question_id": 15284, "image": "000000273711.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of dining table in the image."}
+{"question_id": 15314, "image": "000000455157.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of person in the image."}
+{"question_id": 15315, "image": "000000455157.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of bench in the image."}
+{"question_id": 15316, "image": "000000455157.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of umbrella in the image."}
+{"question_id": 15317, "image": "000000455157.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of dining table in the image."}
+{"question_id": 15318, "image": "000000455157.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of laptop in the image."}
+{"question_id": 15378, "image": "000000435880.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of bottle in the image."}
+{"question_id": 15379, "image": "000000435880.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of cup in the image."}
+{"question_id": 15380, "image": "000000435880.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of bowl in the image."}
+{"question_id": 15381, "image": "000000435880.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of couch in the image."}
+{"question_id": 15382, "image": "000000435880.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of laptop in the image."}
+{"question_id": 15383, "image": "000000435880.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of refrigerator in the image."}
+{"question_id": 15384, "image": "000000540414.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of person in the image."}
+{"question_id": 15385, "image": "000000540414.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of bus in the image."}
+{"question_id": 15386, "image": "000000540414.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of umbrella in the image."}
+{"question_id": 15387, "image": "000000540414.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of handbag in the image."}
+{"question_id": 15388, "image": "000000540414.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of bottle in the image."}
+{"question_id": 15389, "image": "000000540414.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of bowl in the image."}
+{"question_id": 15486, "image": "000000082807.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of dog in the image."}
+{"question_id": 15487, "image": "000000082807.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of cake in the image."}
+{"question_id": 15488, "image": "000000082807.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of chair in the image."}
+{"question_id": 15489, "image": "000000082807.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of dining table in the image."}
+{"question_id": 15498, "image": "000000331352.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of toilet in the image."}
+{"question_id": 15499, "image": "000000331352.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of sink in the image."}
+{"question_id": 15505, "image": "000000170670.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of bottle in the image."}
+{"question_id": 15506, "image": "000000170670.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of cup in the image."}
+{"question_id": 15507, "image": "000000170670.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of fork in the image."}
+{"question_id": 15508, "image": "000000170670.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of bowl in the image."}
+{"question_id": 15509, "image": "000000170670.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of carrot in the image."}
+{"question_id": 15510, "image": "000000170670.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of chair in the image."}
+{"question_id": 15511, "image": "000000170670.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of dining table in the image."}
+{"question_id": 15538, "image": "000000166521.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of couch in the image."}
+{"question_id": 15539, "image": "000000166521.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of tv in the image."}
+{"question_id": 15540, "image": "000000166521.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of book in the image."}
+{"question_id": 15545, "image": "000000513283.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of person in the image."}
+{"question_id": 15546, "image": "000000513283.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of bottle in the image."}
+{"question_id": 15547, "image": "000000513283.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of knife in the image."}
+{"question_id": 15548, "image": "000000513283.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of pizza in the image."}
+{"question_id": 15549, "image": "000000513283.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of dining table in the image."}
+{"question_id": 15563, "image": "000000067315.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of person in the image."}
+{"question_id": 15564, "image": "000000067315.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of tie in the image."}
+{"question_id": 15630, "image": "000000147415.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of person in the image."}
+{"question_id": 15631, "image": "000000147415.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of bottle in the image."}
+{"question_id": 15632, "image": "000000147415.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of cup in the image."}
+{"question_id": 15633, "image": "000000147415.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of chair in the image."}
+{"question_id": 15634, "image": "000000147415.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of laptop in the image."}
+{"question_id": 15635, "image": "000000147415.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of remote in the image."}
+{"question_id": 15636, "image": "000000147415.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of keyboard in the image."}
+{"question_id": 15637, "image": "000000147415.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of book in the image."}
+{"question_id": 15638, "image": "000000302760.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of bottle in the image."}
+{"question_id": 15639, "image": "000000302760.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of sink in the image."}
+{"question_id": 15924, "image": "000000344100.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of cup in the image."}
+{"question_id": 15925, "image": "000000344100.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of spoon in the image."}
+{"question_id": 15926, "image": "000000344100.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of sandwich in the image."}
+{"question_id": 15927, "image": "000000344100.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of dining table in the image."}
+{"question_id": 15928, "image": "000000344100.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of laptop in the image."}
+{"question_id": 15964, "image": "000000059598.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of person in the image."}
+{"question_id": 15965, "image": "000000059598.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of banana in the image."}
+{"question_id": 15966, "image": "000000059598.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of cake in the image."}
+{"question_id": 15967, "image": "000000059598.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of chair in the image."}
+{"question_id": 15968, "image": "000000059598.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of laptop in the image."}
+{"question_id": 15969, "image": "000000059598.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of mouse in the image."}
+{"question_id": 15970, "image": "000000059598.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of keyboard in the image."}
+{"question_id": 15971, "image": "000000059598.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of cell phone in the image."}
+{"question_id": 15996, "image": "000000239627.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of bottle in the image."}
+{"question_id": 15997, "image": "000000239627.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of cup in the image."}
+{"question_id": 15998, "image": "000000239627.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of spoon in the image."}
+{"question_id": 15999, "image": "000000239627.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of bowl in the image."}
+{"question_id": 16000, "image": "000000239627.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of sink in the image."}
+{"question_id": 16011, "image": "000000335954.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of knife in the image."}
+{"question_id": 16012, "image": "000000335954.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of bowl in the image."}
+{"question_id": 16041, "image": "000000134112.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of dog in the image."}
+{"question_id": 16042, "image": "000000134112.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of bed in the image."}
+{"question_id": 16043, "image": "000000134112.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of laptop in the image."}
+{"question_id": 16047, "image": "000000043581.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of fork in the image."}
+{"question_id": 16048, "image": "000000043581.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of knife in the image."}
+{"question_id": 16049, "image": "000000043581.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of pizza in the image."}
+{"question_id": 16050, "image": "000000043581.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of dining table in the image."}
+{"question_id": 16114, "image": "000000179141.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of person in the image."}
+{"question_id": 16115, "image": "000000179141.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of cup in the image."}
+{"question_id": 16116, "image": "000000179141.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of pizza in the image."}
+{"question_id": 16117, "image": "000000179141.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of dining table in the image."}
+{"question_id": 16239, "image": "000000218091.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of chair in the image."}
+{"question_id": 16240, "image": "000000218091.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of couch in the image."}
+{"question_id": 16241, "image": "000000218091.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of bed in the image."}
+{"question_id": 16242, "image": "000000218091.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of tv in the image."}
+{"question_id": 16243, "image": "000000218091.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of remote in the image."}
+{"question_id": 16286, "image": "000000236166.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of person in the image."}
+{"question_id": 16287, "image": "000000236166.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of dog in the image."}
+{"question_id": 16376, "image": "000000244750.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of person in the image."}
+{"question_id": 16377, "image": "000000244750.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of wine glass in the image."}
+{"question_id": 16378, "image": "000000244750.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of cup in the image."}
+{"question_id": 16379, "image": "000000244750.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of dining table in the image."}
+{"question_id": 16404, "image": "000000472046.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of bowl in the image."}
+{"question_id": 16405, "image": "000000472046.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of orange in the image."}
+{"question_id": 16406, "image": "000000472046.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of chair in the image."}
+{"question_id": 16407, "image": "000000472046.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of couch in the image."}
+{"question_id": 16408, "image": "000000472046.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of potted plant in the image."}
+{"question_id": 16409, "image": "000000472046.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of dining table in the image."}
+{"question_id": 16410, "image": "000000472046.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of oven in the image."}
+{"question_id": 16411, "image": "000000472046.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of sink in the image."}
+{"question_id": 16412, "image": "000000472046.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of vase in the image."}
+{"question_id": 16432, "image": "000000257896.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of person in the image."}
+{"question_id": 16433, "image": "000000257896.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of tie in the image."}
+{"question_id": 16439, "image": "000000066706.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of person in the image."}
+{"question_id": 16440, "image": "000000066706.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of cup in the image."}
+{"question_id": 16441, "image": "000000066706.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of banana in the image."}
+{"question_id": 16521, "image": "000000419312.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of cup in the image."}
+{"question_id": 16522, "image": "000000419312.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of fork in the image."}
+{"question_id": 16523, "image": "000000419312.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of knife in the image."}
+{"question_id": 16524, "image": "000000419312.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of bowl in the image."}
+{"question_id": 16525, "image": "000000419312.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of carrot in the image."}
+{"question_id": 16526, "image": "000000419312.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of cake in the image."}
+{"question_id": 16527, "image": "000000419312.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of dining table in the image."}
+{"question_id": 16629, "image": "000000246968.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of person in the image."}
+{"question_id": 16630, "image": "000000246968.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of bottle in the image."}
+{"question_id": 16631, "image": "000000246968.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of wine glass in the image."}
+{"question_id": 16632, "image": "000000246968.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of cup in the image."}
+{"question_id": 16633, "image": "000000246968.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of spoon in the image."}
+{"question_id": 16634, "image": "000000246968.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of banana in the image."}
+{"question_id": 16635, "image": "000000246968.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of chair in the image."}
+{"question_id": 16636, "image": "000000246968.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of potted plant in the image."}
+{"question_id": 16637, "image": "000000246968.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of remote in the image."}
+{"question_id": 16638, "image": "000000246968.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of microwave in the image."}
+{"question_id": 16639, "image": "000000246968.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of oven in the image."}
+{"question_id": 16640, "image": "000000246968.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of sink in the image."}
+{"question_id": 16655, "image": "000000536073.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of bottle in the image."}
+{"question_id": 16656, "image": "000000536073.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of cup in the image."}
+{"question_id": 16657, "image": "000000536073.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of knife in the image."}
+{"question_id": 16673, "image": "000000056288.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of sandwich in the image."}
+{"question_id": 16674, "image": "000000056288.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of tv in the image."}
+{"question_id": 16675, "image": "000000056288.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of keyboard in the image."}
+{"question_id": 16713, "image": "000000277020.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of person in the image."}
+{"question_id": 16714, "image": "000000277020.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of tie in the image."}
+{"question_id": 16715, "image": "000000277020.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of cup in the image."}
+{"question_id": 16716, "image": "000000277020.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of bowl in the image."}
+{"question_id": 16717, "image": "000000277020.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of chair in the image."}
+{"question_id": 16718, "image": "000000277020.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of dining table in the image."}
+{"question_id": 16831, "image": "000000562229.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of person in the image."}
+{"question_id": 16832, "image": "000000562229.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of skateboard in the image."}
+{"question_id": 16867, "image": "000000482917.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of person in the image."}
+{"question_id": 16868, "image": "000000482917.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of dog in the image."}
+{"question_id": 16869, "image": "000000482917.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of couch in the image."}
+{"question_id": 16870, "image": "000000482917.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of dining table in the image."}
+{"question_id": 16871, "image": "000000482917.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of tv in the image."}
+{"question_id": 16880, "image": "000000017029.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of car in the image."}
+{"question_id": 16881, "image": "000000017029.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of dog in the image."}
+{"question_id": 16882, "image": "000000017029.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of frisbee in the image."}
+{"question_id": 16967, "image": "000000365655.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of person in the image."}
+{"question_id": 16968, "image": "000000365655.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of bus in the image."}
+{"question_id": 16983, "image": "000000026465.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of person in the image."}
+{"question_id": 16984, "image": "000000026465.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of chair in the image."}
+{"question_id": 16985, "image": "000000026465.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of laptop in the image."}
+{"question_id": 16986, "image": "000000026465.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of remote in the image."}
+{"question_id": 16987, "image": "000000026465.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of keyboard in the image."}
+{"question_id": 16988, "image": "000000026465.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of cell phone in the image."}
+{"question_id": 16994, "image": "000000178469.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of cup in the image."}
+{"question_id": 16995, "image": "000000178469.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of laptop in the image."}
+{"question_id": 16996, "image": "000000178469.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of keyboard in the image."}
+{"question_id": 16997, "image": "000000178469.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of book in the image."}
+{"question_id": 17002, "image": "000000455597.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of person in the image."}
+{"question_id": 17003, "image": "000000455597.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of bottle in the image."}
+{"question_id": 17004, "image": "000000455597.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of cup in the image."}
+{"question_id": 17005, "image": "000000455597.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of spoon in the image."}
+{"question_id": 17006, "image": "000000455597.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of bowl in the image."}
+{"question_id": 17007, "image": "000000455597.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of oven in the image."}
+{"question_id": 17035, "image": "000000353096.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of tv in the image."}
+{"question_id": 17036, "image": "000000353096.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of mouse in the image."}
+{"question_id": 17037, "image": "000000353096.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of keyboard in the image."}
+{"question_id": 17060, "image": "000000550322.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of cup in the image."}
+{"question_id": 17061, "image": "000000550322.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of spoon in the image."}
+{"question_id": 17062, "image": "000000550322.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of dining table in the image."}
+{"question_id": 17063, "image": "000000550322.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of scissors in the image."}
+{"question_id": 17114, "image": "000000145781.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of dog in the image."}
+{"question_id": 17115, "image": "000000145781.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of bottle in the image."}
+{"question_id": 17127, "image": "000000253386.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of person in the image."}
+{"question_id": 17128, "image": "000000253386.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of dog in the image."}
+{"question_id": 17249, "image": "000000055528.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of person in the image."}
+{"question_id": 17250, "image": "000000055528.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of couch in the image."}
+{"question_id": 17251, "image": "000000055528.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of remote in the image."}
+{"question_id": 17252, "image": "000000055528.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of book in the image."}
+{"question_id": 17253, "image": "000000055528.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of clock in the image."}
+{"question_id": 17254, "image": "000000055528.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of toothbrush in the image."}
+{"question_id": 17366, "image": "000000450559.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of person in the image."}
+{"question_id": 17367, "image": "000000450559.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of skateboard in the image."}
+{"question_id": 17433, "image": "000000047121.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of cat in the image."}
+{"question_id": 17434, "image": "000000047121.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of bottle in the image."}
+{"question_id": 17435, "image": "000000047121.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of bowl in the image."}
+{"question_id": 17436, "image": "000000047121.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of sink in the image."}
+{"question_id": 17442, "image": "000000106912.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of person in the image."}
+{"question_id": 17443, "image": "000000106912.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of skateboard in the image."}
+{"question_id": 17451, "image": "000000426329.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of cake in the image."}
+{"question_id": 17452, "image": "000000426329.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of tv in the image."}
+{"question_id": 17497, "image": "000000125850.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of cat in the image."}
+{"question_id": 17498, "image": "000000125850.jpg", "text": "Give the normalized bounding box coordinates in the format [x1, y1, x2, y2] of all instances of bowl in the image."}

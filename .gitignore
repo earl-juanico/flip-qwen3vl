@@ -1,0 +1,52 @@
+# ── Model weights (download from HuggingFace — see README.md) ─────────────────
+model/
+*.safetensors
+*.bin
+*.pt
+*.pth
+*.gguf
+
+# ── Dataset (download from cocodataset.org — see README.md) ──────────────────
+data/
+
+# ── Inference outputs (regenerate via probe_and_sweep.py) ────────────────────
+answers/
+
+# ── Intermediate per-sample metrics (regenerate via evaluate_sweep.py) ───────
+prc*/
+
+# ── Secrets ───────────────────────────────────────────────────────────────────
+HFTOKEN.txt
+.env
+*.env
+
+# ── Python ────────────────────────────────────────────────────────────────────
+__pycache__/
+*.py[cod]
+*.pyd
+*.egg-info/
+dist/
+build/
+.eggs/
+
+# ── Virtual environments ──────────────────────────────────────────────────────
+.venv/
+venv/
+env/
+
+# ── Jupyter ───────────────────────────────────────────────────────────────────
+.ipynb_checkpoints/
+*.ipynb
+
+# ── Logs / SLURM ─────────────────────────────────────────────────────────────
+*.log
+nohup.out
+slurm-*.out
+
+# ── Editor / OS ───────────────────────────────────────────────────────────────
+.DS_Store
+*.swp
+*.swo
+*~
+.idea/
+.vscode/
