@@ -33,7 +33,7 @@ from `instances_val2017.json`:
 | Script | Purpose | Primary output |
 |---|---|---|
 | `generate_questions_clustered.py` | Clustered detection set — one query per category per qualifying image; used in the core detection/counting sweep | `question_clustered.jsonl`, `coco_gt_val2017_novel_clustered.jsonl` |
-| `generate_questions_leftright.py` | Spatial left/right negative-control set — singleton-object pairs with balanced yes/no labels; used to verify that FLIP does not spuriously disrupt spatial reasoning | `question_spatial_lr_clustered.jsonl`, `coco_gt_val2017_spatial_lr_clustered.jsonl` |
+| `generate_questions_leftright.py` | Spatial left/right negative-control set — singleton-object pairs with balanced yes/no labels; used to verify that FLIP does not spuriously disrupt spatial reasoning | `question_leftright_clustered.jsonl`, `coco_gt_val2017_spatial_lr_clustered.jsonl` |
 
 Pre-generated files are committed and do not need to be recreated for standard
 replication.  See `README.md § Question file generation` for full CLI usage.

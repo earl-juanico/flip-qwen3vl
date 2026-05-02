@@ -26,7 +26,7 @@ Design choices:
 
 Outputs:
   questions/question_leftright<suffix>.jsonl
-  gt/coco_gt_val2017_leftright<suffix>.jsonl
+  gt/coco_gt_val2017_spatial_lr<suffix>.jsonl
 
 Usage:
   python3 generate_questions_leftright.py [options]
@@ -469,7 +469,7 @@ def main():
     q_out = os.path.join(
         SCRIPT_DIR,
         "questions",
-        f"question_spatial_lr{args.suffix}.jsonl",
+        f"question_leftright{args.suffix}.jsonl",
     )
     gt_out = os.path.join(
         SCRIPT_DIR,

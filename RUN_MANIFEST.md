@@ -20,7 +20,8 @@ the nearest 0.5 h for the 4B model and to the nearest whole hour for 8B / Kimi.
 | Same-site operator comparisons | 0.5 h | 5 h | 17 h |
 | Feature-coherence controls | 0.5 h | 5 h | 17 h |
 | Image-cluster subsampling runs | 0.5 h | 5 h | 17 h |
-| **Total (reported experiments)** | **~5–6 h** | **~52–53 h** | **~189 h** |
+| Left/right spatial control sweep | 0.5 h | — | — |
+| **Total (reported experiments)** | **~5.5–6.5 h** | **~52–53 h** | **~189 h** |
 
 Preliminary or failed runs outside the reported experiments required
 approximately **8 GPU-hours** (not attributed to any single model or experiment).
@@ -43,6 +44,12 @@ approximately **8 GPU-hours** (not attributed to any single model or experiment)
   semantically stratified COCO subsets to check result stability.
 - **Cross-architecture replications** are implicit in the three model rows above;
   the same protocol was applied to each architecture without modification.
+- The **left/right spatial control sweep** (`sweep_leftright.py`) runs only on
+  Qwen3-VL-4B.  It sweeps the same 17-value *ϑ* grid per permutation fraction
+  (fractions 0.0, 0.1, 0.2, 0.25, 0.33 for both `permclip` and `permadd` variants)
+  and evaluates each run with `lr_accuracy.py`.  Wall-clock time per fraction is
+  approximately 5–6 minutes on an A100 (~0.5 h total across all 10 fraction/variant
+  combinations).
 
 ## Hardware specification
 

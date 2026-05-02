@@ -51,7 +51,7 @@ The script has two operating modes:
                     used when this flag is omitted.
 
   --split        Suffix appended to question/GT filenames, e.g. '_novel'
-                 selects rca_qset_val_novel.jsonl (default: _novel).
+                 selects flip_qset_val_novel.jsonl (default: _novel).
 
 
 ── POOLED GLM COMPARISON (mode 2) ───────────────────────────────────────────
@@ -117,13 +117,13 @@ The script has two operating modes:
 
 ── EXAMPLE ──────────────────────────────────────────────────────────────────
 
-  # Compare rca_none (control) vs rca_-2.0 and rca_-2.5 (experiments)
+  # Compare flip_none (control) vs flip_-2.0 and flip_-2.5 (experiments)
   python3 evaluate_FitAP_vlm.py \
       --model Qwen3-VL-8B-Instruct \
       --compare-csvs \
-        "prc/prc-Qwen3-VL-8B-Instruct_novel_rca_none/metrics_reason_det_Qwen3-VL-8B-Instruct_rca_none.csv,\
-         prc/prc-Qwen3-VL-8B-Instruct_novel_rca_-2.0/metrics_reason_det_Qwen3-VL-8B-Instruct_rca_-2.0.csv,\
-         prc/prc-Qwen3-VL-8B-Instruct_novel_rca_-2.5/metrics_reason_det_Qwen3-VL-8B-Instruct_rca_-2.5.csv"
+        "prc/prc-Qwen3-VL-8B-Instruct_novel_flip_none/metrics_reason_det_Qwen3-VL-8B-Instruct_flip_none.csv,\
+         prc/prc-Qwen3-VL-8B-Instruct_novel_flip_-2.0/metrics_reason_det_Qwen3-VL-8B-Instruct_flip_-2.0.csv,\
+         prc/prc-Qwen3-VL-8B-Instruct_novel_flip_-2.5/metrics_reason_det_Qwen3-VL-8B-Instruct_flip_-2.5.csv"
 
 
 ── PERFORMANCE OPTIMIZATIONS ────────────────────────────────────────────────

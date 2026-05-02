@@ -85,6 +85,8 @@ flip-qwen3vl/
 ├── evaluate_sweep.py         # Step 3 — post-sweep GLM evaluation pipeline
 ├── fliprate.py               # Indoor/outdoor scene-label flip-rate helper
 ├── check_real_model_layers.py  # Diagnostic: verify patch applied to correct layers
+├── sweep_leftright.py        # Left/right spatial control sweep (per-vartheta)
+├── lr_accuracy.py            # Accuracy evaluator for left/right spatial predictions
 │
 ├── infer/
 │   ├── query_detect.py       # Detection queries (bounding boxes)
@@ -221,7 +223,7 @@ sufficient horizontal separation and low overlap, then constructs
 Labels are balanced to a near-exact 50/50 yes/no split by alternating the prompt order.
 Outputs:
 
-- `questions/question_spatial_lr_clustered.jsonl`
+- `questions/question_leftright_clustered.jsonl`
 - `gt/coco_gt_val2017_spatial_lr_clustered.jsonl`
 
 ```bash
@@ -375,6 +377,116 @@ Open `reports/` to find:
 
 A significant `irr_indirect < 1` (p < 0.05) supports the claim that *ϑ* indirectly reduces
 counting error through improved detection.
+
+## Left/right spatial control sweep
+
+`sweep_leftright.py` and `lr_accuracy.py` implement a standalone negative control that
+tests whether *ϑ* systematically shifts a task FLIP should leave unchanged: binary
+"Is \<obj1\> to the left of \<obj2\>?" spatial reasoning.  A well-specified intervention
+produces a flat accuracy curve across all *ϑ* values.
+
+The sweep is independent of `probe_and_sweep.py` and `evaluate_sweep.py` — it does not
+produce detection or counting metrics, only a per-vartheta yes/no accuracy CSV.
+
+### Step 1 — Deploy the server
+
+Use the same `serve_with_patch.py` command as the main sweep.  Set
+`FLIP_PERMUTE_FRACTION` when running a permutation-control variant:
+
+```bash
+# No permutation (plain FLIP floor)
+python serve_with_patch.py
+
+# Permutation-clip variant at fraction 0.2
+FLIP_PERMUTE_FRACTION=0.2 python serve_with_patch.py
+
+# Permutation-additive variant at fraction 0.2
+# (requires serve_with_patch.py configured for additive mode)
+FLIP_PERMUTE_FRACTION=0.2 python serve_with_patch.py
+```
+
+### Step 2 — Run the sweep
+
+In a separate terminal with the server running:
+
+```bash
+# Plain FLIP floor, default vartheta list, default output directory
+python sweep_leftright.py
+
+# Permutation-clip variant at fraction 0.2 — label the output dir accordingly
+python sweep_leftright.py \
+    --api-port 8001 \
+    --output-dir ./answers/answers_leftright_permclip_0.2 \
+    --output-suffix _permclip_0.2
+
+# Permutation-additive variant — same pattern, different suffix
+python sweep_leftright.py \
+    --api-port 8001 \
+    --output-dir ./answers/answers_leftright_permadd_0.2 \
+    --output-suffix _permadd_0.2
+
+# Dry run to preview all commands
+python sweep_leftright.py --dry-run
+
+# Sweep a subset of vartheta values
+python sweep_leftright.py --output-suffix _subset -- none 0.0 -0.5 -1.0 -2.0
+```
+
+The default vartheta list is:
+```
+none  0.0  0.1  0.2  0.4  0.5  1.0  -0.2  -0.3  -0.5  -1.0  -1.5  -2.0  -2.5  -4.0  -5.0  -50.0
+```
+
+### Step 3 — Read the output
+
+Each output directory contains one JSONL file per *ϑ* value and a summary CSV:
+
+```
+answers_leftright_permclip_0.2/
+├── Qwen3-VL-4B-Instruct_permclip_0.2_vartheta_none.jsonl
+├── Qwen3-VL-4B-Instruct_permclip_0.2_vartheta_-0.5.jsonl
+├── ...
+└── lr_sweep_permclip_0.2.csv
+```
+
+| Column | Interpretation |
+|---|---|
+| `vartheta` | Flooring threshold *ϑ* |
+| `lr_accuracy` | Fraction of yes/no predictions matching the ground-truth label |
+
+The question set is balanced to a near-exact 50/50 yes/no split, so a baseline accuracy of
+~0.50–0.65 is expected.  A flat curve across all *ϑ* values confirms the intervention does
+not systematically confound basic spatial reasoning.
+
+To inspect individual wrong predictions:
+
+```bash
+python lr_accuracy.py \
+    answers/answers_leftright_permclip_0.2/Qwen3-VL-4B-Instruct_permclip_0.2_vartheta_none.jsonl \
+    --gt gt/coco_gt_val2017_spatial_lr_clustered.jsonl \
+    --mismatches
+```
+
+### Permutation-fraction sweep
+
+To replicate the multi-fraction negative-control runs, for each fraction:
+
+1. Start the server in one terminal (wait for `Application startup complete`):
+   ```bash
+   FLIP_PERMUTE_FRACTION=0.2 python serve_with_patch.py
+   ```
+2. In a second terminal, run the sweep:
+   ```bash
+   python sweep_leftright.py \
+       --api-port 8001 \
+       --output-dir ./answers/answers_leftright_permclip_0.2 \
+       --output-suffix _permclip_0.2
+   ```
+3. Stop the server and repeat for the next fraction (0.0, 0.1, 0.2, 0.25, 0.33).
+
+The `permadd` additive-shift variant uses a wider vartheta grid (including positive values
+up to 5.0); replace `DEFAULT_VARTHETA_VALUES` in `sweep_leftright.py` with the commented-out
+block in that file before running.
 
 ## Environment variables summary
 
