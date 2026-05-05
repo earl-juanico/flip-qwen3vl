@@ -70,11 +70,26 @@ export MODEL_PATH=model/Qwen3-VL-4B-Instruct
 python serve_with_patch.py
 
 # Terminal B — sweep (wait for "Application startup complete" in Terminal A)
+# Runs detect / reason / indout (bootstrap) + leftright (spatial control) in parallel per ϑ.
+# The leftright accuracy summary is written to answers/answers_leftright_clustered/lr_sweep.csv.
 python probe_and_sweep.py
 
 # Evaluate
 python evaluate_sweep.py --output-csv reports/results_4b.csv
 ```
+
+To collect per-token A/M stats (Section 5.1) during the leftright queries, launch the server with:
+
+```bash
+FLIP_LOG_STATS=1 FLIP_STATS_CSV=/tmp/flip_am_stats.csv python serve_with_patch.py
+```
+
+Then run the sweep as above; the stats CSV is copied to `answers/answers_leftright_clustered/am_stats.csv` automatically.
+
+> **Layer-wise stats note**: layer-level stats accumulate only during prefill when CUDA graphs
+> are active (the default).  To collect stats over all tokens (including decode steps), set
+> `FLIP_ENFORCE_EAGER=1` when launching the server; this disables CUDA graph capture
+> and is also required when sweeping `FLIP_VARTHETA_FILE` dynamically with `FLIP_LAYER_INDICES` set.
 
 Repeat with `MODEL_PATH=model/Qwen3-VL-8B-Instruct` and
 `MODEL_PATH=model/Kimi-VL-A3B-Instruct` for the 8B and Kimi runs.
@@ -95,7 +110,7 @@ export FLIP_PERMUTE_FRACTION=0.2
 export FLIP_PERMUTE_SEED=1234
 python serve_with_patch.py
 
-# Terminal B
+# Terminal B — leftright spatial control also runs alongside bootstrap tasks
 python probe_and_sweep.py --output-suffix _permute
 
 # Evaluate
@@ -109,8 +124,10 @@ Re-run the primary sweep with non-default `FLIP_LAYER_INDICES` values:
 
 ```bash
 # Example: FLIP on layers 0–13 only (first half of 28-layer model)
+# FLIP_ENFORCE_EAGER=1 is required because FLIP_LAYER_INDICES + FLIP_VARTHETA_FILE
+# would otherwise bake the initial vartheta into CUDA graphs (stale across sweep steps).
 export FLIP_LAYER_INDICES=0:14
-python serve_with_patch.py &
+FLIP_ENFORCE_EAGER=1 python serve_with_patch.py &
 python probe_and_sweep.py --output-suffix _layer0_13
 python evaluate_sweep.py --output-suffix _layer0_13 \
     --output-csv reports/results_4b_layer0_13.csv
@@ -177,13 +194,16 @@ python check_real_model_layers.py
 | File | Description |
 |---|---|
 | `reports/results_*.csv` | GLM/mediation summary statistics per *(pct, vartheta)* |
-| `reports/results_*_delta-mediation.csv` | Delta-method mediation decomposition |
+| `reports/results_*_delta-mediation.csv` | Delta-method mediation decomposition (`a`, `b`, `axb`, `SE`, `p-value`, `irr_indirect`) |
 | `prc_*/` | Per-sample IoU and count-error metrics (intermediate) |
 | `answers_*/` | Raw VLM inference outputs (JSON-per-line) |
+| `answers/answers_leftright_clustered/lr_sweep.csv` | Per-ϑ yes/no spatial accuracy from `probe_and_sweep.py` |
+| `answers/answers_leftright_clustered/am_stats.csv` | Per-ϑ A_{ℓ,i}/M_{ℓ,i} stats (only when `FLIP_LOG_STATS=1`) |
 
 A successful primary sweep for the 4B model produces `results_4b.csv` with 17
 *ϑ* rows (including `none`) for each bootstrap fraction, containing non-null
-`irr_indirect`, `irr_direct`, `dr_50`, and `switchrate` columns.
+`irr_indirect`, `irr_direct`, `dr_50`, and `switchrate` columns.  A corresponding
+`results_4b_delta-mediation.csv` is always written alongside it.
 
 ## Checklist
 
@@ -192,5 +212,8 @@ A successful primary sweep for the 4B model produces `results_4b.csv` with 17
 - [ ] Model weights present under `model/`
 - [ ] `python check_real_model_layers.py` completes without errors
 - [ ] `FLIP_PERMUTE_SEED=1234` for all permutation runs
+- [ ] `FLIP_ENFORCE_EAGER=1` set when using `FLIP_LAYER_INDICES` with a dynamic `FLIP_VARTHETA_FILE`
 - [ ] `prc/` and `answers/` archived between model runs to prevent cross-contamination
 - [ ] `reports/` inspected for null values before reporting results
+- [ ] `answers/answers_leftright_clustered/lr_sweep.csv` present after each sweep (confirm leftright ran)
+- [ ] `reports/results_*_delta-mediation.csv` present alongside each `results_*.csv`

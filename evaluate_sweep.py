@@ -34,6 +34,8 @@ Usage examples:
   python3 evaluate_sweep.py --pct 100 --output-csv results_full.csv      # full dataset + CSV
   python3 evaluate_sweep.py --no-rename --output-csv results.csv         # skip rename, write CSV
   python3 evaluate_sweep.py --pct 80 --output-suffix _v2                  # data in *_clustered_v2/ dirs
+  python3 evaluate_sweep.py --answers-root /data/sweep_v2/answers          # answers in a custom directory
+  python3 evaluate_sweep.py --pct 80 --answers-root ../other_run/answers   # relative path also accepted
 """
 
 import argparse
@@ -102,10 +104,11 @@ def _questions_file(pct: int, sample: str) -> Path:
     return BASE_DIR / "questions" / f"question_pct{pct}_{sample}.jsonl"
 
 
-def _answers_dir(pct: int, task: str, suffix: str = "") -> Path:
+def _answers_dir(pct: int, task: str, suffix: str = "", answers_root: Path = None) -> Path:
+    root = answers_root if answers_root is not None else BASE_DIR / "answers"
     if pct == 100:
-        return BASE_DIR / "answers" / f"answers_{task}_clustered{suffix}"
-    return BASE_DIR / "answers" / f"answers_bootstrap_{pct}_{task}_clustered{suffix}"
+        return root / f"answers_{task}_clustered{suffix}"
+    return root / f"answers_bootstrap_{pct}_{task}_clustered{suffix}"
 
 
 def _prc_dir_raw(model: str, split: str, vartheta_arg: str) -> Path:
@@ -295,6 +298,7 @@ def _evaluate_one(
     height: int,
     rename: bool,
     output_suffix: str,
+    answers_root: Path,
     dry_run: bool,
 ) -> dict:
     tag                  = _vartheta_tag(vartheta_str)
@@ -303,9 +307,9 @@ def _evaluate_one(
     baseline_vartheta_arg = _vartheta_arg(sample, baseline_tag)
     is_baseline          = (tag == baseline_tag)
 
-    detect_dir = _answers_dir(pct, "detect", output_suffix)
-    reason_dir = _answers_dir(pct, "reason", output_suffix)
-    indout_dir = _answers_dir(pct, "indout", output_suffix)
+    detect_dir = _answers_dir(pct, "detect", output_suffix, answers_root)
+    reason_dir = _answers_dir(pct, "reason", output_suffix, answers_root)
+    indout_dir = _answers_dir(pct, "indout", output_suffix, answers_root)
 
     label = f"pct={pct}  vartheta={vartheta_str!r}"
     print(f"\n  ── {label} ──")
@@ -473,8 +477,15 @@ def main():
              "default.  Must match the --output-suffix used in the corresponding "
              "probe_and_sweep.py run (default: empty, i.e. use the standard name).",
     )
+    parser.add_argument(
+        "--answers-root", default=None, metavar="DIR",
+        help="Root directory containing the answers_* subdirectories "
+             "(default: <repo>/answers/).  Use this to point at a directory other "
+             "than answers/, e.g. --answers-root /data/sweep_v2/answers.",
+    )
     args = parser.parse_args()
 
+    answers_root = Path(args.answers_root).resolve() if args.answers_root else BASE_DIR / "answers"
     vartheta_values = args.vartheta_values if args.vartheta_values else DEFAULT_VARTHETA_VALUES
     batch_configs = (
         [c for c in BATCH_CONFIGS if c["pct"] in args.pct]
@@ -500,6 +511,7 @@ def main():
     print(f"Baseline     : {args.baseline!r}  (tag: {baseline_tag!r})")
     print(f"Rename prc    : {not args.no_rename}")
     print(f"Output suffix : {args.output_suffix!r}")
+    print(f"Answers root  : {answers_root}")
     print(f"Vartheta list : {ordered}")
     print(f"Dry run       : {args.dry_run}")
     print(f"Output CSV    : {args.output_csv or '(none)'}")
@@ -551,6 +563,7 @@ def main():
                 height=args.height,
                 rename=not args.no_rename,
                 output_suffix=args.output_suffix,
+                answers_root=answers_root,
                 dry_run=args.dry_run,
             )
             rows.append(row)

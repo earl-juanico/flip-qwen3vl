@@ -74,6 +74,20 @@ needed for a typical run.
   QWEN3_DISABLE_VIDEO   Set to 1 to tell vLLM to ignore video inputs.
   HFTOKEN_FILE          Path to a file containing your HuggingFace token.
                         Default: <repo_root>/HFTOKEN.txt.
+  FLIP_ENFORCE_EAGER    Set to 1 to pass --enforce-eager to vLLM, disabling
+                        CUDA graph capture.  Required when FLIP_LAYER_INDICES
+                        is set with a dynamic vartheta file (FLIP_VARTHETA_FILE)
+                        because vLLM bakes the floor vartheta into the CUDA graph
+                        at capture time — if the vartheta later changes across a
+                        sweep, the captured graph keeps the old value and the
+                        intervention is silently wrong for all decode steps.
+                        FLIP_LOG_STATS layer-level stats also depend on this flag
+                        (Python stats code does not run during CUDA graph replay).
+                        Without FLIP_LAYER_INDICES set, CUDA graphs are safe.
+  FLIP_STATS_CSV        Path for the temporary per-sweep stats CSV written by
+                        the server (FLIP_LOG_STATS=1).  sweep_leftright.py copies
+                        this into --output-dir after the sweep completes.
+                        Example: FLIP_STATS_CSV=/tmp/flip_am_stats.csv
 """
 import importlib.util
 import os
@@ -244,6 +258,21 @@ def main():
         "--tensor-parallel-size",
         "1",#"2",
     ]
+
+    # --enforce-eager disables vLLM's CUDA graph capture so that Python layer
+    # wrappers execute on every token.  This is required whenever
+    # FLIP_LAYER_INDICES is set with a dynamic vartheta (FLIP_VARTHETA_FILE),
+    # because vLLM bakes the floor vartheta into the CUDA graph at capture
+    # time — if the vartheta later changes (e.g. across a vartheta sweep),
+    # the captured graph keeps the old value and the intervention is silently
+    # wrong for all decode steps.  FLIP_LOG_STATS layer-level stats also depend
+    # on this flag for the same reason (Python stats code does not run during
+    # CUDA graph replay).  Without FLIP_LAYER_INDICES set, CUDA graphs are safe.
+    flip_enforce_eager = _parse_bool_env("FLIP_ENFORCE_EAGER", default=False)
+    if flip_enforce_eager:
+        log.info("FLIP_ENFORCE_EAGER=1: adding --enforce-eager (disables CUDA graphs; "
+                 "slower decode but required for layer-wise stats collection)")
+        argv.append("--enforce-eager")
 
     # If QWEN3_DISABLE_VIDEO is true, let vLLM ignore video inputs
     if _parse_bool_env("QWEN3_DISABLE_VIDEO", default=False):

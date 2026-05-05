@@ -17,6 +17,26 @@
 #   • Permute + floor  : randomly shuffle a fraction of hidden-state dimensions
 #                        among themselves, then floor the result.
 #
+# STATISTICS (Section 5.1)
+# ------------------------
+# When FLIP_LOG_STATS=1, the module accumulates token-level pre-floor statistics
+# at every active intervention site, keyed by (site, vartheta) so each ϑ value
+# in a sweep gets its own bucket.  Two quantities are tracked per token i at
+# layer ℓ, computed over the d hidden dimensions before any floor is applied:
+#
+#   A_{ℓ,i}(ϑ) = (1/d) Σ_k 1{z_ik^(ℓ) < ϑ}   — fraction of dims clamped
+#   M_{ℓ,i}(ϑ) = (1/d) Σ_k (ϑ − z_ik^(ϑ))₊   — mean clamp magnitude
+#
+# The aggregate reported is E_{samples,t}[A_{ℓ,t}] ± std and likewise for M,
+# where t ranges over logit-readout token positions T:
+#   • Final site   : hidden_states passed to compute_logits are already T
+#                    (vLLM pre-selects readout positions), so accumulation is exact.
+#   • Layer sites  : all token positions in each forward call are included;
+#                    single-token decode steps are exact, prefill is approximate.
+#
+# Stats are independent of whether the floor intervention is active at a given
+# site: FLIP_LOG_STATS=1 measures A and M even when FLIP_APPLY_ON_FINAL=0.
+#
 # USAGE
 # -----
 # Import this module before vLLM loads the model (serve_with_patch.py does
@@ -72,6 +92,43 @@
 #     When 1, emit a one-time INFO log the first time FLIP is applied on each
 #     wrapped decoder layer.  Useful for confirming which layers are active.
 #
+# FLIP_LOG_STATS          (0 | 1, default 0)
+#     When 1, accumulate per-token A_{ℓ,i}(ϑ) and M_{ℓ,i}(ϑ) at every active
+#     site and periodically log mean ± std to stderr.  Stats are keyed by
+#     (site, vartheta) so each ϑ value in a sweep produces a separate bucket.
+#     Stats are always on pre-floor hidden states (measuring what would be
+#     clamped) and are independent of FLIP_APPLY_ON_FINAL.
+#     A final summary is emitted at process exit via atexit.
+#
+# FLIP_LOG_STATS_INTERVAL (int, default 100)
+#     Log a running mean ± std summary every N forward calls per (site, ϑ)
+#     bucket.  The summary covers all tokens accumulated in that bucket.
+#     Set to 1 to log after every forward call.
+#
+# FLIP_STATS_CSV          (path | unset)
+#     When set, write accumulated stats to this CSV file on every periodic
+#     summary and at process exit.  The CSV has one row per (ϑ, site) bucket
+#     with columns: vartheta, site, n_tokens, n_calls, A_mean, A_std,
+#     M_mean, M_std.  The file is overwritten on each write so it stays
+#     current mid-sweep.  Intended as a temporary scratchpad; sweep_leftright.py
+#     copies it into --output-dir after the sweep completes.
+#     Example: FLIP_STATS_CSV=/tmp/flip_am_stats.csv
+#
+# NOTE — CUDA graphs and layer-wise stats
+# ----------------------------------------
+# vLLM uses CUDA graphs for decode steps by default.  After the graph is
+# captured, only CUDA kernels replay; the Python wrapped_forward code
+# (including the stats block in _apply) does NOT execute.  As a result,
+# layer-wise A/M stats accumulate only during prefill, giving far fewer
+# tokens than the Final site (which is called outside the graph boundary
+# on every token).  To collect layer-wise stats over all tokens — including
+# decode steps — restart serve_with_patch.py with:
+#
+#   FLIP_ENFORCE_EAGER=1
+#
+# This passes --enforce-eager to vLLM, disabling CUDA graph capture so that
+# Python executes on every forward call.  Decode throughput will be lower.
+#
 # QWEN3_DISABLE_VIDEO    (0 | 1, default 0)
 #     When 1, skip video embedding processing entirely
 #     (adds --limit-mm-per-prompt video=0 equivalent at the model level).
@@ -85,6 +142,12 @@
 # Permute 20% of dims + floor, applied at all layers and before logits:
 #   FLIP_VARTHETA=0.0 FLIP_LAYER_INDICES=all \
 #   FLIP_PERMUTE_FRACTION=0.2 FLIP_APPLY_ON_FINAL=1 \
+#   python serve_with_patch.py
+#
+# Permute 20% of dims + floor on layer 8, with stats collection for a sweep:
+#   FLIP_VARTHETA=0.0 FLIP_LAYER_INDICES=8 \
+#   FLIP_PERMUTE_FRACTION=0.2 \
+#   FLIP_LOG_STATS=1 FLIP_STATS_CSV=/tmp/flip_am_stats.csv \
 #   python serve_with_patch.py
 #
 # Runtime vartheta adjustment via file (no restart needed):
@@ -172,6 +235,9 @@ FLIP_PERMUTE_FRACTION = _parse_vartheta_from_env("FLIP_PERMUTE_FRACTION")
 FLIP_LAYER_INDICES_ENV = os.environ.get("FLIP_LAYER_INDICES")
 FLIP_APPLY_ON_FINAL = _parse_bool_env("FLIP_APPLY_ON_FINAL", default=False)
 FLIP_LOG_LAYER_FLOOR_ONCE = _parse_bool_env("FLIP_LOG_LAYER_FLOOR_ONCE", default=False)
+FLIP_LOG_STATS = _parse_bool_env("FLIP_LOG_STATS", default=False)
+FLIP_LOG_STATS_INTERVAL = _parse_int_env("FLIP_LOG_STATS_INTERVAL", default=100)
+FLIP_STATS_CSV = os.environ.get("FLIP_STATS_CSV")
 
 # Optional: file to override vartheta at runtime
 FLIP_VARTHETA_FILE = os.environ.get("FLIP_VARTHETA_FILE")
@@ -245,6 +311,125 @@ def _floor_hidden_states(x: torch.Tensor, t: Optional[float]) -> torch.Tensor:
     if t is None:
         return x
     return x.clamp(min=t)
+
+
+def _compute_am_stats_tokens(h: torch.Tensor, t: float):
+    """
+    Compute per-token A_{ℓ,i}(ϑ) and M_{ℓ,i}(ϑ) from Section 5.1.
+
+        A_{ℓ,i}(ϑ) = (1/d) Σ_k 1{z_ik < ϑ}   — fraction of dims clamped, token i
+        M_{ℓ,i}(ϑ) = (1/d) Σ_k (ϑ − z_ik)₊   — mean clamp magnitude, token i
+
+    h: [..., d] — last dim is hidden dimension; any leading dims are token positions.
+    Returns (A_vals, M_vals): Python lists, one float per token position.
+    """
+    h_f = h.detach().float()
+    if h_f.dim() == 1:
+        h_f = h_f.unsqueeze(0)
+    A_vals = (h_f < t).float().mean(dim=-1).tolist()
+    M_vals = (t - h_f).clamp(min=0).mean(dim=-1).tolist()
+    return A_vals, M_vals
+
+
+# Keyed by (site_label, vartheta_str) so each ϑ value gets its own bucket.
+# Example keys: ("Final", "-2.0"), ("Layer 8", "-0.5")
+_stats_accum: dict = {}
+_stats_accum_lock = threading.Lock()
+
+
+def _accumulate_stats(label: str, t: float, A_vals: list, M_vals: list) -> int:
+    """Extend per-token accumulators for (site, vartheta); return call count."""
+    key = (label, str(t))
+    with _stats_accum_lock:
+        if key not in _stats_accum:
+            _stats_accum[key] = {"A": [], "M": [], "n_calls": 0}
+        _stats_accum[key]["A"].extend(A_vals)
+        _stats_accum[key]["M"].extend(M_vals)
+        _stats_accum[key]["n_calls"] += 1
+        return _stats_accum[key]["n_calls"]
+
+
+def _log_stats_summary(label: Optional[str] = None) -> None:
+    """
+    Log mean ± std of accumulated A_{ℓ,i} and M_{ℓ,i} values.
+
+    Reports E_{samples,t}[A_{ℓ,t}(ϑ)] and E_{samples,t}[M_{ℓ,t}(ϑ)] with
+    standard deviation, matching the paper's appendix table format.
+    Pass label=None to log all (site, vartheta) buckets.
+    """
+    with _stats_accum_lock:
+        if label is not None:
+            snapshot = [((lbl, thr), dict(v))
+                        for (lbl, thr), v in _stats_accum.items() if lbl == label]
+        else:
+            snapshot = [((lbl, thr), dict(v)) for (lbl, thr), v in _stats_accum.items()]
+    for (lbl, thr), data in snapshot:
+        A_list = data["A"]
+        M_list = data["M"]
+        n_calls = data["n_calls"]
+        if not A_list:
+            continue
+        n = len(A_list)
+        A_t = torch.tensor(A_list)
+        M_t = torch.tensor(M_list)
+        log.info(
+            "[FLIP stats] %s | vartheta=%s n_tokens=%d n_calls=%d | "
+            "A(ϑ)=%.4f±%.4f  M(ϑ)=%.6f±%.6f",
+            lbl, thr, n, n_calls,
+            A_t.mean().item(), A_t.std().item() if n > 1 else 0.0,
+            M_t.mean().item(), M_t.std().item() if n > 1 else 0.0,
+        )
+
+
+def _write_stats_csv() -> None:
+    """
+    Write accumulated A and M stats to FLIP_STATS_CSV, one row per (ϑ, site).
+
+    CSV columns: vartheta, site, n_tokens, n_calls, A_mean, A_std, M_mean, M_std
+
+    Safe to call repeatedly; overwrites the file each time so the CSV is always
+    up-to-date even if the server is still running during a long sweep.
+    """
+    if not FLIP_STATS_CSV:
+        return
+    with _stats_accum_lock:
+        snapshot = [((lbl, thr), dict(v)) for (lbl, thr), v in _stats_accum.items()]
+    if not snapshot:
+        return
+
+    def _thr_sort_key(thr_str: str) -> float:
+        try:
+            return float(thr_str)
+        except (ValueError, TypeError):
+            return float("inf")
+
+    sorted_rows = sorted(snapshot, key=lambda x: (_thr_sort_key(x[0][1]), x[0][0]))
+
+    import csv as _csv
+    try:
+        os.makedirs(os.path.dirname(os.path.abspath(FLIP_STATS_CSV)) or ".", exist_ok=True)
+        with open(FLIP_STATS_CSV, "w", newline="", encoding="utf-8") as f:
+            writer = _csv.writer(f)
+            writer.writerow(["vartheta", "site", "n_tokens", "n_calls",
+                             "A_mean", "A_std", "M_mean", "M_std"])
+            for (lbl, thr), data in sorted_rows:
+                A_list = data["A"]
+                M_list = data["M"]
+                if not A_list:
+                    continue
+                n = len(A_list)
+                A_t = torch.tensor(A_list)
+                M_t = torch.tensor(M_list)
+                writer.writerow([
+                    thr, lbl, n, data["n_calls"],
+                    f"{A_t.mean().item():.6f}",
+                    f"{A_t.std().item():.6f}" if n > 1 else "0.000000",
+                    f"{M_t.mean().item():.8f}",
+                    f"{M_t.std().item():.8f}" if n > 1 else "0.00000000",
+                ])
+        log.info("[FLIP stats] CSV written → %s", FLIP_STATS_CSV)
+    except Exception as e:
+        log.warning("[FLIP stats] Failed to write CSV to %s: %s", FLIP_STATS_CSV, e)
 
 
 def _permute_and_floor_hidden_states(
@@ -496,6 +681,12 @@ def _wrap_layer_forward(layer, layer_idx: int):
         seed = FLIP_PERMUTE_SEED if FLIP_PERMUTE_SEED is not None else 1234
 
         def _apply(h: torch.Tensor) -> torch.Tensor:
+            if FLIP_LOG_STATS and should_log_floor:
+                A_vals, M_vals = _compute_am_stats_tokens(h, t)
+                n_calls = _accumulate_stats(f"Layer {layer_idx}", t, A_vals, M_vals)
+                if n_calls == 1 or n_calls % FLIP_LOG_STATS_INTERVAL == 0:
+                    _log_stats_summary(f"Layer {layer_idx}")
+                    _write_stats_csv()
             if lam is not None:
                 return _permute_and_floor_hidden_states(h, t, float(lam), seed)
             return _floor_hidden_states(h, t)
@@ -669,18 +860,30 @@ def _flip_compute_logits(self, hidden_states, *args, **kwargs):
         2. Apply h' = max(h_permuted, vartheta).
     Otherwise applies plain flooring:
         h' = max(h, vartheta)
+
+    Stats note: hidden_states here contains only logit-readout positions (vLLM
+    extracts them before calling compute_logits), so A and M accumulation at
+    this site is exact over T = {logit-readout token positions}.
     """
-    if FLIP_APPLY_ON_FINAL:
-        t = _get_flip_vartheta()
-        if t is not None:
-            lam = FLIP_PERMUTE_FRACTION
-            if lam is not None:
-                seed = FLIP_PERMUTE_SEED if FLIP_PERMUTE_SEED is not None else 1234
-                hidden_states = _permute_and_floor_hidden_states(
-                    hidden_states, t, float(lam), seed
-                )
-            else:
-                hidden_states = _floor_hidden_states(hidden_states, t)
+    t = _get_flip_vartheta()
+    # Stats are independent of FLIP_APPLY_ON_FINAL: measure A and M at the Final
+    # site whenever FLIP_LOG_STATS=1 and a vartheta is set, regardless of whether
+    # the floor intervention is active here.
+    if FLIP_LOG_STATS and t is not None:
+        A_vals, M_vals = _compute_am_stats_tokens(hidden_states, t)
+        n_calls = _accumulate_stats("Final", t, A_vals, M_vals)
+        if n_calls == 1 or n_calls % FLIP_LOG_STATS_INTERVAL == 0:
+            _log_stats_summary("Final")
+            _write_stats_csv()
+    if FLIP_APPLY_ON_FINAL and t is not None:
+        lam = FLIP_PERMUTE_FRACTION
+        if lam is not None:
+            seed = FLIP_PERMUTE_SEED if FLIP_PERMUTE_SEED is not None else 1234
+            hidden_states = _permute_and_floor_hidden_states(
+                hidden_states, t, float(lam), seed
+            )
+        else:
+            hidden_states = _floor_hidden_states(hidden_states, t)
     return _original_compute_logits(self, hidden_states, *args, **kwargs)
 
 
@@ -716,3 +919,14 @@ log.info(
     FLIP_PERMUTE_SEED,
     "disabled" if DISABLE_QWEN3_VIDEO else "enabled",
 )
+
+if FLIP_LOG_STATS:
+    import atexit
+    atexit.register(_log_stats_summary)
+    atexit.register(_write_stats_csv)
+    log.info(
+        "FLIP stats accumulation enabled; summary every %d calls + CSV+log at exit "
+        "(FLIP_STATS_CSV=%s)",
+        FLIP_LOG_STATS_INTERVAL,
+        FLIP_STATS_CSV or "<not set — CSV output disabled>",
+    )

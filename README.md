@@ -268,9 +268,14 @@ Key environment variables:
 | `FLIP_LAYER_INDICES` | *(unset — no layer-wise FLIP)* | Decoder layers to intercept (e.g. `28:`, `all`) |
 | `FLIP_APPLY_ON_FINAL` | `0` | Apply FLIP before vocabulary projection |
 | `FLIP_PERMUTE_FRACTION` | *(unset)* | Fraction of dims to permute (negative control) |
+| `FLIP_ENFORCE_EAGER` | `0` | Pass `--enforce-eager` to vLLM, disabling CUDA graph capture. Required when `FLIP_LAYER_INDICES` is set with a dynamic `FLIP_VARTHETA_FILE` (graphs bake the vartheta at capture time; changing it mid-sweep silently uses the stale value). Also required to collect layer-wise A/M stats (`FLIP_LOG_STATS`) over decode steps. |
+| `FLIP_LOG_STATS` | `0` | Accumulate per-token A_{ℓ,i}(ϑ) (fraction clamped) and M_{ℓ,i}(ϑ) (mean clamp magnitude) at every active intervention site. Logs mean±std summaries every `FLIP_LOG_STATS_INTERVAL` calls and at process exit; also writes to `FLIP_STATS_CSV` if set. |
+| `FLIP_LOG_STATS_INTERVAL` | `100` | Frequency (in forward calls) of running A/M stats log summaries per (site, ϑ) bucket. |
+| `FLIP_STATS_CSV` | *(unset)* | Path for the per-sweep A/M stats CSV written by the server. `probe_and_sweep.py` copies this into the leftright output directory after the sweep completes. |
 | `VLLM_GPU_MEMORY_UTILIZATION` | `0.9` | GPU memory fraction |
 | `MAX_MODEL_LEN` | `4096` | Maximum sequence length |
 | `QWEN3_DISABLE_VIDEO` | `0` | Skip video input handling |
+| `HFTOKEN_FILE` | `HFTOKEN.txt` | Path to a file containing a HuggingFace access token. Loaded automatically if `HUGGINGFACE_HUB_TOKEN` is not set in the environment. |
 
 To verify the patch is applied before starting a full sweep:
 
@@ -292,9 +297,14 @@ This sweeps across the default list of *ϑ* values:
 none  0.0  0.1  0.2  0.4  0.5  1.0  -0.2  -0.3  -0.5  -1.0  -1.5  -2.0  -2.5  -4.0  -5.0  -50.0
 ```
 
-For each *ϑ* value, the sweep runs detection (`query_detect.py`), reasoning (`query_reason.py`),
-and indoor/outdoor (`query_indout.py`) queries **in parallel** across all bootstrap batch sizes
-(pct = 10, 20, 40, 60, 80, 100).  Results are written to `answers/`.
+For each *ϑ* value, the sweep runs four tasks in parallel:
+
+- **Detection** (`query_detect.py`), **reasoning** (`query_reason.py`), and **indoor/outdoor** (`query_indout.py`) — across all bootstrap batch sizes (pct = 10, 20, 40, 60, 80, 100).
+- **Spatial left/right** (`query_leftright.py`) — runs once per *ϑ*, sharing the first batch config's server. Evaluated immediately with `lr_accuracy.py`; accuracy summary written to `answers/answers_leftright_clustered/lr_sweep.csv`.
+
+Results are written to `answers/`.  To skip the leftright task, pass `--no-leftright`.
+
+After the sweep completes, if `FLIP_LOG_STATS=1` was set on the server, the AM stats CSV is copied from the temp path (`/tmp/flip_am_stats.csv` by default) into the leftright output directory as `am_stats.csv`.
 
 Common options:
 
@@ -302,8 +312,11 @@ Common options:
 # Custom vartheta values
 python probe_and_sweep.py -- -2.0 -0.5 none
 
-# Specific bootstrap fractions only
+# Specific bootstrap fractions only (leftright still runs once per vartheta)
 python probe_and_sweep.py --pct 80 100 -- -2.0 none
+
+# Bootstrap-only (skip leftright)
+python probe_and_sweep.py --no-leftright
 
 # Preview all commands without executing
 python probe_and_sweep.py --dry-run
@@ -312,6 +325,15 @@ python probe_and_sweep.py --dry-run
 export FLIP_PERMUTE_FRACTION=0.2
 python serve_with_patch.py &
 python probe_and_sweep.py --output-suffix _permute -- -2.0 none
+
+# Custom root output directory
+python probe_and_sweep.py --output-dir /path/to/results
+
+# Collect AM stats (server must be launched with matching FLIP_STATS_CSV)
+python probe_and_sweep.py --flip-stats-csv /tmp/flip_am_stats.csv
+
+# Per-pct port and config-file overrides
+python probe_and_sweep.py --pct 20 --port 20:8021 --config-file 20:/path/config20/vartheta.txt
 ```
 
 ### Step 3 — Evaluate
@@ -352,6 +374,12 @@ python evaluate_sweep.py --no-rename --output-csv results.csv
 
 # Permutation-run results (reads from *_permute/ answer dirs)
 python evaluate_sweep.py --output-suffix _permute --output-csv results_permute.csv
+
+# Custom baseline vartheta (default: none)
+python evaluate_sweep.py --baseline none --output-csv results.csv
+
+# Answers from a non-default directory
+python evaluate_sweep.py --answers-root /data/sweep_v2/answers --output-csv results_v2.csv
 ```
 
 ### Step 4 — (Optional) Archive prc outputs
@@ -375,6 +403,13 @@ Open `reports/` to find:
 | **Negative control** | `switchrate` | Indoor↔outdoor scene-label flip rate; should not change systematically with *ϑ* under FLIP |
 | **With/without permutation** | compare `results.csv` vs. `results_permute.csv` | Separates flooring from dimension shuffling effects |
 
+The delta-method mediation decomposition is written separately to `results_*_delta-mediation.csv`
+with columns `a`, `SE(a)`, `b`, `SE(b)`, `axb`, `SE(axb)`, `p-value`, `irr_indirect`, `95_pct_ci_irr`.
+
+If AM stats collection was active (`FLIP_LOG_STATS=1`), the per-ϑ A/M summary is in
+`answers/answers_leftright_clustered/am_stats.csv` (columns: `vartheta`, `site`, `n_tokens`,
+`n_calls`, `A_mean`, `A_std`, `M_mean`, `M_std`).
+
 A significant `irr_indirect < 1` (p < 0.05) supports the claim that *ϑ* indirectly reduces
 counting error through improved detection.
 
@@ -385,8 +420,15 @@ tests whether *ϑ* systematically shifts a task FLIP should leave unchanged: bin
 "Is \<obj1\> to the left of \<obj2\>?" spatial reasoning.  A well-specified intervention
 produces a flat accuracy curve across all *ϑ* values.
 
-The sweep is independent of `probe_and_sweep.py` and `evaluate_sweep.py` — it does not
-produce detection or counting metrics, only a per-vartheta yes/no accuracy CSV.
+**Integrated mode (recommended):** `probe_and_sweep.py` now runs the leftright task
+automatically alongside the bootstrap tasks for every *ϑ* value, using the same server as
+the first batch config.  Results are evaluated with `lr_accuracy.py` and written to
+`answers/answers_leftright_clustered/lr_sweep.csv`.  Use `--no-leftright` to skip it.
+
+**Standalone mode:** `sweep_leftright.py` is for multi-fraction permutation-control runs
+that require multiple separate server invocations (one per `FLIP_PERMUTE_FRACTION` value).
+It is independent of `probe_and_sweep.py` and `evaluate_sweep.py` — it produces only a
+per-vartheta yes/no accuracy CSV.
 
 ### Step 1 — Deploy the server
 
@@ -495,14 +537,21 @@ block in that file before running.
 | `MODEL_PATH` | `serve_with_patch.py` | Model weights directory |
 | `VLLM_PORT` | `serve_with_patch.py`, `probe_and_sweep.py` | vLLM API port |
 | `MEDIA_PATH` | `serve_with_patch.py` | Root served by the local HTTP image server |
+| `HFTOKEN_FILE` | `serve_with_patch.py` | Path to HuggingFace token file (default: `HFTOKEN.txt`) |
 | `FLIP_VARTHETA_FILE` | `patch_qwen.py` | Live-reload vartheta config (polled on mtime) |
 | `FLIP_VARTHETA` | `patch_qwen.py` | Override vartheta scalar directly |
 | `FLIP_LAYER_INDICES` | `patch_qwen.py` | Layer specification (e.g. `28:`, `all`, `28,29`) |
 | `FLIP_APPLY_ON_FINAL` | `patch_qwen.py` | Also apply before vocabulary projection |
 | `FLIP_PERMUTE_FRACTION` | `patch_qwen.py` | Permutation fraction for negative-control runs |
 | `FLIP_PERMUTE_SEED` | `patch_qwen.py` | RNG seed for permutation (default: 1234) |
+| `FLIP_ENFORCE_EAGER` | `serve_with_patch.py` | Disable CUDA graph capture (`--enforce-eager`). Required for layer-wise dynamic vartheta sweeps and layer-level stats. |
+| `FLIP_LOG_STATS` | `patch_qwen.py` | Accumulate A_{ℓ,i}(ϑ) / M_{ℓ,i}(ϑ) stats at every active intervention site |
+| `FLIP_LOG_STATS_INTERVAL` | `patch_qwen.py` | Logging frequency (forward calls) per (site, ϑ) bucket (default: 100) |
+| `FLIP_LOG_LAYER_FLOOR_ONCE` | `patch_qwen.py` | Emit a one-time INFO log on first FLIP application per wrapped layer |
+| `FLIP_STATS_CSV` | `patch_qwen.py`, `serve_with_patch.py` | Path for per-sweep A/M stats CSV; overwritten on each periodic summary and at exit |
+| `QWEN3_DISABLE_VIDEO` | `patch_qwen.py`, `serve_with_patch.py` | Skip video embedding processing |
 | `COCO_ROOT` | `evaluate_FitAP_vlm.py` | Path to the `data/` directory |
-| `LAMBDA_FMT_FAIL` | `evaluate_FitAP_vlm.py` | Penalty for format failures (default: 0) |
+| `LAMBDA_FMT_FAIL` | `evaluate_FitAP_vlm.py` | Penalty for format failures (set to 10 by `evaluate_sweep.py` for step-3 GLM comparisons; default 0 for step-1 scoring) |
 
 ## Troubleshooting
 
