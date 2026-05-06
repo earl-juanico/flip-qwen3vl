@@ -1,6 +1,6 @@
 # flip-qwen3vl
 
-Causal probing of Qwen3-VL using **FLIP** (Final Layer Inference-time Probe) interventions.
+Intervention-based probing of Qwen3-VL using **FLIP** (Final Layer Inference-time Probe).
 The study sweeps a hidden-state flooring threshold *ϑ* (vartheta) across decoder layers and
 measures its effect on object detection quality and counting accuracy on COCO val2017.
 
@@ -9,7 +9,7 @@ measures its effect on object detection quality and counting accuracy on COCO va
 The FLIP intervention clamps hidden-state values below *ϑ* to *ϑ* during inference (a floor
 operation applied in-place to selected decoder layers and/or the pre-logit projection).
 By sweeping *ϑ* across a range of values and comparing against a no-intervention baseline
-(`vartheta=none`), the pipeline estimates the causal dose-response relationship between the
+(`vartheta=none`), the pipeline estimates the behavioral dose-response relationship between the
 intervention strength and model behaviour, mediated through detection quality (recall).
 
 The optional **permutation** variant (`FLIP_PERMUTE_FRACTION`) shuffles a fraction of

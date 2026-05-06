@@ -10,7 +10,7 @@ The script has two operating modes:
      reasoning JSONL.  Results are written to a per-condition CSV under prc/.
 
   2. POOLED GLM COMPARISON  — read two or more pre-built CSVs (one per FLIP
-     vartheta variant) and run cluster-robust GLMs to estimate the causal effect
+     vartheta variant) and run cluster-robust GLMs to estimate the treatment effect
      of the experimental condition on detection quality and count accuracy.
      This mode is triggered by --compare-csvs and does NOT require running
      the detection pipeline.
@@ -1066,7 +1066,7 @@ def run_pooled_glms(csv_paths, det_only_glm: bool = False, show_mismatches: bool
     d['gt_count_f'] = d['gt_count'].astype(float).replace(0, np.nan)
     d['tp_iou_norm'] = (d['tp_iou'] / d['gt_count_f']).fillna(0.0)
     # Use recall (TP/gt_count at IoU>=0.5) as detection quality: the direct
-    # causal proxy for counting error (coverage of GT objects found).
+    # grounding proxy for counting error (coverage of GT objects found).
     if "recall" in d.columns:
         d['det_quality'] = pd.to_numeric(d['recall'], errors='coerce').fillna(0.0)
     else:
