@@ -135,9 +135,11 @@ python evaluate_sweep.py --output-suffix _layer0_13 \
 
 ### 4. Same-site operator comparisons
 
-Apply alternative interventions at the same layer sites by modifying
-`patch_qwen.py` to use a ceiling or absolute-value clamp operator, then
-re-running steps 1–3 with the modified server.
+Apply alternative same-site magnitude-bounding operators by modifying
+`patch_qwen.py`: replace the flooring operator with symmetric clipping
+(`clip(z, -|ϑ|, +|ϑ|)`) or additive shift (uniform translation by the
+mean flooring displacement at the same *ϑ*), then re-run steps 1–3 with
+the modified server.
 
 ### 5. Feature-coherence controls
 

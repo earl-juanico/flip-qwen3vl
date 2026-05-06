@@ -10,7 +10,7 @@ The FLIP intervention clamps hidden-state values below *ϑ* to *ϑ* during infer
 operation applied in-place to selected decoder layers and/or the pre-logit projection).
 By sweeping *ϑ* across a range of values and comparing against a no-intervention baseline
 (`vartheta=none`), the pipeline estimates the behavioral dose-response relationship between the
-intervention strength and model behaviour, mediated through detection quality (recall).
+intervention strength and model behaviour, with detection recall (R₅₀) as the grounding proxy.
 
 The optional **permutation** variant (`FLIP_PERMUTE_FRACTION`) shuffles a fraction of
 hidden-state dimensions before flooring, enabling a feature-coherence experiment.
@@ -399,7 +399,7 @@ Open `reports/` to find:
 | Analysis | Source columns | Interpretation |
 |---|---|---|
 | **Dose-response** | `dr_50`, `95_ci_dr_50` | Effect of *ϑ* on ΔIoU-weighted recall vs. baseline |
-| **Mediation** | `a`, `b`, `axb`, `p-value`, `irr_indirect` | Indirect effect of *ϑ* on counting error through the detection pathway |
+| **Grounding-proxy association** | `a`, `b`, `axb`, `p-value`, `irr_indirect` | Delta-method product summary: compatibility of the *ϑ*→counting-error pathway with a shared detection-grounding factor |
 | **Negative control** | `switchrate` | Indoor↔outdoor scene-label flip rate; should not change systematically with *ϑ* under FLIP |
 | **With/without permutation** | compare `results.csv` vs. `results_permute.csv` | Separates flooring from dimension shuffling effects |
 
@@ -410,15 +410,17 @@ If AM stats collection was active (`FLIP_LOG_STATS=1`), the per-ϑ A/M summary i
 `answers/answers_leftright_clustered/am_stats.csv` (columns: `vartheta`, `site`, `n_tokens`,
 `n_calls`, `A_mean`, `A_std`, `M_mean`, `M_std`).
 
-A significant `irr_indirect < 1` (p < 0.05) supports the claim that *ϑ* indirectly reduces
-counting error through improved detection.
+A significant `irr_indirect < 1` (p < 0.05) supports the grounding-proxy association between
+*ϑ* and counting error via detection recall — consistent with a shared grounding factor, not
+direct within-pass mediation.
 
 ## Left/right spatial control sweep
 
 `sweep_leftright.py` and `lr_accuracy.py` implement a standalone negative control that
-tests whether *ϑ* systematically shifts a task FLIP should leave unchanged: binary
-"Is \<obj1\> to the left of \<obj2\>?" spatial reasoning.  A well-specified intervention
-produces a flat accuracy curve across all *ϑ* values.
+tests whether the same *ϑ* sweep reproduces a positive interior regime on a task the
+detection-grounding pathway should not govern: binary "Is \<obj1\> to the left of \<obj2\>?"
+spatial reasoning.  A structured intervention does not reproduce a bounded interior optimum
+on this control — accuracy remains near baseline over non-collapse strengths.
 
 **Integrated mode (recommended):** `probe_and_sweep.py` now runs the leftright task
 automatically alongside the bootstrap tasks for every *ϑ* value, using the same server as
