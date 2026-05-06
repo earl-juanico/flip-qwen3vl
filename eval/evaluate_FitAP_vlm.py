@@ -84,7 +84,7 @@ The script has two operating modes:
                      exponentiated IRR_indirect = exp(a×b).  An IRR_indirect < 1
                      that is statistically significant supports the claim that θ
                      indirectly reduces counting error through improved detection,
-                     i.e. full mediation of the θ→T pathway through recall.
+                     i.e. grounding-proxy compatibility of the θ→T pathway via detection recall.
                      Requires scipy (scipy.stats.norm); no additional CLI flag needed.
 
                    The consolidated metric E_combined per condition is:
